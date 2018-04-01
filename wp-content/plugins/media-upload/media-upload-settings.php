@@ -205,9 +205,11 @@ function media_upload_load_poster_details( $id ) {
 function media_upload_resize_image($id, $img_url) {
 	$path = wp_upload_dir()['path'] . '/';
 	$filename = pathinfo($img_url);
+	$file = $path .  $filename['basename'];
+
 	$img = new imagick();
 	$img->setResolution(300,300);
-    $img->readImage($img_url);
+    $img->readImage($file);
     $img->setCompressionQuality(100);
     $img->stripImage();
     $img->setImageResolution(300,300);
