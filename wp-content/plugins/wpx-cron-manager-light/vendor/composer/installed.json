@@ -1,0 +1,53 @@
+[
+    {
+        "name": "wpbones/wpbones",
+        "version": "0.8.2",
+        "version_normalized": "0.8.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wpbones/WPBones.git",
+            "reference": "60ff4c6dc151766cf1cde933d2d0cba44f17da11"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/wpbones/WPBones/zipball/60ff4c6dc151766cf1cde933d2d0cba44f17da11",
+            "reference": "60ff4c6dc151766cf1cde933d2d0cba44f17da11",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "time": "2016-10-24 11:21:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "WPXCronManagerLight\\WPBones\\": "src/"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Giovambattista Fazioli",
+                "email": "giovambattista.fazioli@gmail.com",
+                "homepage": "http://undolog.com"
+            }
+        ],
+        "description": "WordPress framework for Laravel developers",
+        "homepage": "https://github.com/wpbones/wpbones",
+        "keywords": [
+            "framework",
+            "laravel",
+            "plugins",
+            "themes",
+            "wordpress",
+            "wpbones"
+        ]
+    }
+]

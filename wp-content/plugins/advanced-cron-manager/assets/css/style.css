@@ -1,0 +1,133 @@
+.acm h2 {
+	margin-bottom: 0.5em;
+}
+
+#acm_content {
+	width: 63%;
+	margin-right: 2%;
+	float: left;
+}
+
+#acm_content table.crons .row-actions a {
+	cursor: pointer;
+}
+
+#acm_content table.crons tr#add_task_row button {
+	width: 60%;
+	margin: 0 auto;
+	display: block;
+}
+
+#acm_content table.crons tr#add_task_form_row td {
+	vertical-align: middle;
+}
+
+#acm_content table.crons tr#add_task_form_row input#add-task {
+	width: 100%;
+}
+
+#acm_content table.crons tr#add_task_form_row .argument-field {
+	margin-bottom: 7px;
+}
+
+#acm_content table.crons tr.cron-added-new td {
+	background-color: #D4F1D4;
+}
+
+#acm_aside {
+	width: 35%;
+	float: right;
+}
+
+#acm_aside .postbox h3 {
+	cursor: default;
+}
+
+#acm_aside #schedules-list li a.remove {
+	display: none;
+	color: #a00;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#acm_aside #schedules-list li span.disabled-action {
+	display: none;
+	color: #ddd;
+	text-decoration: none;
+}
+
+#acm_aside #schedules-list li a.remove:hover {
+	color: red;
+}
+
+#acm_aside #schedules-list li:hover a.remove,
+#acm_aside #schedules-list li:hover span.disabled-action {
+	display: inline-block;
+}
+
+#acm_aside form .field {
+	width: 100%;
+	display: block;
+	float: none;
+	clear: both;
+	margin: 7px 0;
+}
+
+#acm_aside .field.go {
+	width: 100%;
+	text-align: right;
+}
+
+#acm_aside form label {
+	width: 100%;
+	display: block;
+	float: none;
+	clear: both;
+	font-size: 14px;
+}
+
+@media only screen and (max-width: 1120px) {
+
+	#acm_content {
+		margin-bottom: 1em;
+	}
+
+	#acm_content, #acm_aside {
+		width: 100%;
+		float: none;
+	}
+
+}
+
+@media screen and (max-width: 782px) {
+
+	table.crons .column-args,
+	table.crons .column-schedule {
+		display: none;
+	}
+
+	table.crons .column-hook,
+	table.crons .column-next {
+		width: 50%;
+	}
+
+	#acm_aside form label {
+		font-size: 16px;
+	}
+
+}
+
+#acm-pro {
+	margin-top: 20px;
+}
+
+.placeholder-div {
+	text-align: center;
+	color: #888;
+}
+
+.placeholder-div a {
+	font-size: 1.3em;
+	text-decoration: none;
+	color: #888;
+}

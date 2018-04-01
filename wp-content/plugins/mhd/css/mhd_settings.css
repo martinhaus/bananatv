@@ -1,0 +1,21 @@
+.db-table{
+    width: 50%;
+    margin-top: 20px;
+}
+
+.delete-button {
+    margin-top: 5px;
+}
+
+#input {
+    width:50%;
+}
+
+.stop-name {
+    width: 275px;
+    display: block;
+}
+
+.stops-table {
+    width: 70%;
+}

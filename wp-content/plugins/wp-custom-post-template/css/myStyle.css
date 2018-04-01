@@ -1,0 +1,39 @@
+/* CSS Document */
+.butt-trmp{ background:#A3B745; border-radius: 3px; color:#FFFFFF; border:none; cursor:pointer; font-size:12px; margin-top:10px;  -moz-box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;height: 30px;
+    line-height: 28px;
+    padding: 0 12px 2px; 
+    border-color: #839237;
+    box-shadow: 0 1px 0 #C0CD7B inset, 0 1px 0 rgba(0, 0, 0, 0.15);
+    }
+.FormTypeSetting {
+    border: 1px solid #A7A7A7;
+    margin-top: 20px;
+    padding: 15px;
+}
+.FormTyp_setting {
+    color: #4F8A10;
+    margin-left: 5px;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+.clear{clear:both;}	
+.type_chkbox {
+    float: left;
+    margin-top: 10px;
+    width: 260px;
+}
+.note_summry{font-style:italic; float: left;}
+
+.msgText {
+    margin-left: -2px!important;
+    width: 790px!important;
+}
+
+.type_submit {
+    float: left;
+    width: 100%;
+	margin-bottom: 10px
+}
+

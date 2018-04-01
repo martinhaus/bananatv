@@ -1,0 +1,12 @@
+.announcement {
+    font-size: 4em;
+    line-height: 1.2em;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.announcements-all {
+
+    text-overflow: clip;
+    width: 95%;
+    height:500px;
+}

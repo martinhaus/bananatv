@@ -1,0 +1,219 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Roy Janssen <info@rjnetwork.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: wp-page-widgets.php:120
+msgid "Select an Image"
+msgstr "Selecteer een afbeelding"
+
+#: wp-page-widgets.php:121
+msgid "Insert Into Widget"
+msgstr "Invoegen in widget"
+
+#: wp-page-widgets.php:131
+msgid "Press the following button will remove all of these inactive widgets"
+msgstr "Druk op de volgende knop om al deze inactieve widgets te verwijderen"
+
+#: wp-page-widgets.php:132
+msgid "Remove inactive widgets"
+msgstr "Inactieve widgets verwijderen"
+
+#: wp-page-widgets.php:162
+#: wp-page-widgets.php:174
+msgid "Page Widgets"
+msgstr "Pagina widgets"
+
+#: wp-page-widgets.php:179
+msgid "Search page"
+msgstr "Zoekpagina"
+
+#: wp-page-widgets.php:189
+msgid "Saved Changes"
+msgstr "Wijzigingen opgeslagen"
+
+#: wp-page-widgets.php:197
+msgid "Settings - Page Widgets"
+msgstr "Instellingen - Pagina widgets"
+
+#: wp-page-widgets.php:205
+msgid "Would you like to make a donation?"
+msgstr "Wil je doneren?"
+
+#: wp-page-widgets.php:207
+msgid "Yes I have donated at least $5. Thank you for your nice work. And hide the donation message please."
+msgstr "Ja ik heb minstens $5 gedoneerd. Bedankt! Verberg de donatie melding a.u.b."
+
+#: wp-page-widgets.php:207
+msgid "Donate Now"
+msgstr "Doneer nu"
+
+#: wp-page-widgets.php:209
+msgid "No, I want to use this without donation."
+msgstr "Nee, ik wil deze plugin gebruiken zonder een donatie te doen."
+
+#: wp-page-widgets.php:214
+msgid "Available for post type"
+msgstr "Beschikbaar voor post type"
+
+#: wp-page-widgets.php:226
+msgid "Which sidebars you want to customize"
+msgstr "Welke zijbalken wil je aanpassen"
+
+#: wp-page-widgets.php:237
+msgid "Select Customize by default (when adding new)"
+msgstr "Selecteer standaard Website algemeen (bij toevoegen)"
+
+#: wp-page-widgets.php:239
+msgid "Yes, I want to select Customize when adding new things."
+msgstr "Ja, ik wil Alleen deze pagina selecteren bij het toevoegen."
+
+#: wp-page-widgets.php:241
+msgid "No, I want to select Default setting when adding new things."
+msgstr "Nee, wil wil Website algemeen bij het toevoegen."
+
+#: wp-page-widgets.php:276
+#: wp-page-widgets.php:341
+#: wp-page-widgets.php:466
+#: wp-page-widgets.php:534
+#: wp-page-widgets.php:612
+#: wp-page-widgets.php:676
+#: wp-page-widgets.php:755
+#: wp-page-widgets.php:820
+msgid "Inactive Widgets"
+msgstr "Inactieve widgets"
+
+#: wp-page-widgets.php:297
+msgid "Page widgets for Search page"
+msgstr "Pagina widgets voor zoekpagina"
+
+#: wp-page-widgets.php:299
+msgid "Click to toggle"
+msgstr "Klik voor in/uitklappen"
+
+#: wp-page-widgets.php:300
+msgid "Widgets area"
+msgstr "Widget ruimte"
+
+#: wp-page-widgets.php:305
+#: wp-page-widgets.php:497
+#: wp-page-widgets.php:639
+#: wp-page-widgets.php:783
+msgid "Thank you for using this plugin. If you appreciate our works, please consider to"
+msgstr "Bedankt voor het gebruiken van deze plugin. Wanneer je ons werk waardeert, "
+
+#: wp-page-widgets.php:305
+#: wp-page-widgets.php:497
+#: wp-page-widgets.php:639
+#: wp-page-widgets.php:783
+msgid "donate us"
+msgstr "doneer dan"
+
+#: wp-page-widgets.php:305
+#: wp-page-widgets.php:497
+#: wp-page-widgets.php:639
+#: wp-page-widgets.php:783
+msgid "With your help, we can continue supporting and developing this plugin."
+msgstr "Met je hulp kunnen we support blijven leveren en deze plugin verder ontwikkelen."
+
+#: wp-page-widgets.php:305
+#: wp-page-widgets.php:497
+#: wp-page-widgets.php:639
+#: wp-page-widgets.php:783
+msgid "Hide this donation message"
+msgstr "Verberg deze donatie melding."
+
+#: wp-page-widgets.php:311
+#: wp-page-widgets.php:504
+msgid "Default"
+msgstr "website algemeen"
+
+#: wp-page-widgets.php:311
+#: wp-page-widgets.php:504
+msgid "follow"
+msgstr "volg"
+
+#: wp-page-widgets.php:311
+#: wp-page-widgets.php:504
+#: wp-page-widgets.php:646
+#: wp-page-widgets.php:790
+msgid "Widgets settings"
+msgstr "Widget instellingen"
+
+#: wp-page-widgets.php:312
+#: wp-page-widgets.php:505
+#: wp-page-widgets.php:647
+#: wp-page-widgets.php:791
+msgid "Customize"
+msgstr "alleen deze pagina"
+
+#: wp-page-widgets.php:326
+#: wp-page-widgets.php:519
+#: wp-page-widgets.php:661
+#: wp-page-widgets.php:805
+msgid "Available Widgets"
+msgstr "Beschikbare widgets"
+
+#: wp-page-widgets.php:326
+#: wp-page-widgets.php:519
+#: wp-page-widgets.php:661
+#: wp-page-widgets.php:805
+msgid "Deactivate"
+msgstr "Deactiveren"
+
+#: wp-page-widgets.php:329
+#: wp-page-widgets.php:522
+#: wp-page-widgets.php:664
+#: wp-page-widgets.php:808
+msgid "Drag widgets from here to a sidebar on the right to activate them. Drag widgets back here to deactivate them and delete their settings."
+msgstr "Sleep widgets vanaf hier naar een zijbalk rechts om ze te activeren. Sleep widgets terug om ze te deactiveren en de instellingen te verwijderen."
+
+#: wp-page-widgets.php:356
+#: wp-page-widgets.php:548
+#: wp-page-widgets.php:690
+#: wp-page-widgets.php:834
+msgid "Drag widgets here to remove them from the sidebar but keep their settings."
+msgstr "Sleep widgets naar hier om ze te verwijderen van de zijbalk maar de instellingen te bewaren."
+
+#: wp-page-widgets.php:416
+msgid "Page widgets for Front page - only latest posts option"
+msgstr "Pagina widgets voor Voorpagina - alleen laatste berichten"
+
+#: wp-page-widgets.php:422
+msgid "Enable for drag edit Category"
+msgstr "Inschakelen voor slepen aanpassen categorie"
+
+#: wp-page-widgets.php:429
+msgid "Save Changes"
+msgstr "Opslaan"
+
+#: wp-page-widgets.php:778
+msgid "Widgets"
+msgstr "widgets"
+
+#: wp-page-widgets.php:917
+msgid "Updated search page option."
+msgstr "Zoekpagina instellingen geupdate."
+
+#: wp-page-widgets.php:979
+msgid "This user is not have access to edit theme options"
+msgstr "Deze gebruiker heeft geen toegang tot het wijzigen van thema instellingen."
+
+#: wp-page-widgets.php:984
+msgid "Not post, taxonomy or search page."
+msgstr "Geen post, taxonomie of zoekpagina."
+
+#: wp-page-widgets.php:1022
+msgid "Not save ajax widgets order"
+msgstr "Geen ajax voor het opslaan van widget volgorde."
+
+#: wp-page-widgets.php:1060
+msgid "An error has occured. Please reload the page and try again."
+msgstr "Er is een fout opgetreden. Herlaad de pagina en probeer opnieuw."
+

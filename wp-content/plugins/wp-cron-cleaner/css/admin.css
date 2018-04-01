@@ -1,0 +1,377 @@
+/*---------------------------------------------------------------------------------------------
+*
+*  Global styles
+*
+*---------------------------------------------------------------------------------------------*/
+html {
+    overflow-y: scroll; 
+}
+.WPCC-content-max-width {
+	max-width: 840px;
+}
+.WPCC-margin-r-300 {
+	margin-top: 10px;
+	margin-right: 260px;
+}
+.WPCC-margin-t-20 {
+	margin-top: 20px;
+}
+.WPCC-margin-b-20 {
+	margin-bottom: 20px;
+}
+.WPCC-margin-l-3 {
+	margin-left: 3px !important;
+}
+.WPCC-clear-both{
+	clear: both;
+}
+.WPCC-float-left{
+	float: left;
+}
+.WPCC-float-right{
+	float: right;
+}
+#WPCC-please-wait{
+	display: none;
+	height: 34px !important;
+	margin-bottom: 40px;
+	color: #999;
+	font-family: verdana;
+	font-size: 11px;
+	text-align: center;
+}
+.WPCC-loading-gif{
+	height: 45px;
+	background: url("../images/loading_img.gif") no-repeat;
+	background-position: 50% 0% !important;
+	text-align: center;
+	margin: -20px 0px 0px 0px;
+}
+.WPCC-category-counts{
+	background: #fefefe;
+	padding: 10px 0px 20px 0px;
+	text-align: center;
+}
+.WPCC-category-counts a:hover{
+	padding-bottom: 6px;
+	border-bottom: 1px solid #ccc;
+}
+.WPCC-category-counts-links {
+	text-decoration: none !important;
+}
+.WPCC-selected-category{
+	padding-bottom: 6px;	
+	font-weight: bold;
+}
+.WPCC-category-separator{
+	color: #999;
+	padding-left: 10px;
+	padding-right: 10px
+}
+.WPCC-run-new-search{
+	height: 34px !important;
+	min-width: 175px !important;
+	background-image: url("../images/search-icon.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: 8px 50% !important;
+	padding-left: 30px !important;
+}
+.WPCC-category-color{
+	padding: 0px 5px;
+	margin-right: 5px;
+	border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;	
+	display: inline-block;
+	height: 10px
+}
+/*---------------------------------------------------------------------------------------------
+*
+*  These styles override those of WordPress
+*
+*---------------------------------------------------------------------------------------------*/
+.widefat {
+    border-spacing: 1px;
+}
+.widefat > thead {
+	background: #f1f1f1;
+}
+.widefat thead tr th{
+    color: #666;
+}
+.widefat td, .widefat th {
+    border-bottom: 1px solid #f1f1f1;
+	border-right: 1px solid #f1f1f1;
+	overflow: visible !important;
+}
+.widefat th {
+	font-weight: bold !important;
+	font-size: 13px !important;
+}
+.widefat > tbody > tr:hover {
+	background-color: #f9f9f9;
+}
+.widefat td, .widefat td ol, .widefat td p, .widefat td ul {
+    line-height: 1.5em !important;
+}
+.widefat tbody th.check-column, .widefat tfoot td.check-column, .widefat thead td.check-column {
+    padding: 9px 0 5px 3px !important;
+}
+.widefat th input, .widefat thead td input{
+	margin: 1px 0 0 8px !important;
+}
+/* This style is used by WP tables (WP_List_Table class) for columns, it is not used directly in the code */
+.column-site_id{
+	width: 40px;
+}
+.column-hook_name{
+	width: 30%;
+}
+.column-next_run{
+	width: 30%;
+	font-size: 12px !important;
+}
+.column-hook_belongs_to{
+	/*width: 32%;*/
+}
+/* To hide tfoot from tables used in the plugin */
+.widefat tfoot {
+	display: none;
+}
+/* To add a space between pagination and the head of tables */
+.tablenav {
+    margin: 8px 0 12px !important;
+}
+/* To color rows of tables in white */
+.alternate, .striped > tbody > *:nth-child(2n), ul.striped > *:nth-child(2n) {
+    background-color: #fff;
+}
+.alternate, .striped > tbody > *:nth-child(2n+1), ul.striped > *:nth-child(2n+1) {
+    background-color: #fefefe;
+}
+/* For paginations of tables */
+.tablenav-pages-navspan {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.tablenav .tablenav-pages a, .tablenav-pages-navspan {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.tablenav-pages .current-page {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.displaying-num{
+	display: none !important;
+}
+/* For tabs */
+h2.nav-tab-wrapper {
+    border-bottom: 0px !important;
+    padding-bottom: 0 !important;
+    padding-left: 0px !important;
+}
+h2 .nav-tab {
+    font-size: 13px;
+    line-height: 24px;
+	font-weight: normal;	
+    padding: 4px 10px !important;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+}
+.nav-tab-active, .nav-tab-active:hover {
+    background: #fff;
+    font-weight: bold !important;	
+    border-bottom: 0px;
+    color: #000;
+    border-top: 2px solid #1a9ac9;
+    color: #0073aa;	
+}
+/*---------------------------------------------------------------------------------------------
+*
+*  Tabs
+*
+*---------------------------------------------------------------------------------------------*/
+.WPCC-tab-box {
+    float: left;
+	width: 100%;
+}
+.WPCC-tab-box-div {
+	min-height: 400px;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 30px 20px 20px 20px;
+    border-radius: 0 5px 5px 5px;
+    -moz-border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;	
+}
+
+/*---------------------------------------------------------------------------------------------
+*
+*  Sidebar
+*
+*---------------------------------------------------------------------------------------------*/
+.WPCC-sidebar {
+	float: right;
+	border: 1px solid #ccc;
+	background: #fff;
+	margin-right: -260px;
+	margin-top: 42px;
+	width: 240px;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+}
+.WPCC-sidebar  > div{
+	padding: 15px;
+}
+.WPCC-sidebar  h2{
+	font-size: 16px;
+	text-align: center;
+	color: #888;
+	line-height: 24px;
+}
+.WPCC-donation-text{
+	text-align:center;
+	color: #555
+}
+.WPCC-donation-gif{
+	background: url("../images/donate.gif") no-repeat;
+	width: 92px;
+	height: 26px;
+	margin: auto;
+}
+.WPCC-grey-row{
+	height: 20px;
+	background-color: #f9f9f9;
+}
+.WPCC-white-row{
+	height: 20px;
+}
+.WPCC-row-text{
+	font-size: 13px;
+	color: #555;
+}
+.WPCC-sidebar-link{
+	text-decoration: none;
+}
+.WPCC-support-us{
+	background: url("../images/rate.png") no-repeat center right;
+	width: 88px;
+	height: 18px;
+	margin-top: 0px;
+}
+
+/*---------------------------------------------------------------------------------------------
+*
+*  Box messages
+*
+*---------------------------------------------------------------------------------------------*/
+.WPCC-box-warning {
+    background: #fff5cc url("../images/warning.png") no-repeat scroll 8px 50%;
+    /*border-bottom: 1px dashed orange;*/
+    color: #404040;
+    padding: 10px 10px 10px 40px;
+	margin-bottom: 20px;
+}
+.WPCC-box-info {
+    background: #f0f5fa url("../images/info.png") no-repeat scroll 8px 50%;
+    border-bottom: 1px dashed #ccc;
+    color: #404040;
+    padding: 10px 10px 10px 40px;
+	margin-bottom: 20px;
+}
+.WPCC-jquery-dialog{
+	padding:20px;
+	display:none;
+}
+
+/*---------------------------------------------------------------------------------------------
+*
+*  Tool tip
+*
+*---------------------------------------------------------------------------------------------*/
+a.WPCC-tooltips {
+  position: relative;
+  display: inline;
+  cursor: pointer;
+}
+a.WPCC-tooltips span {
+  position: absolute;
+  color: #fff;
+  background: #333;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 8px;
+  visibility: hidden;
+  width: 200px;
+  text-shadow: 0 0px 0 rgba(255, 255, 255, 0.8);
+}
+a.WPCC-tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-right: 8px solid #333;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+a:hover.WPCC-tooltips span {
+  visibility: visible;
+  opacity: 0.9;
+  left: 100%;
+  top: 50%;
+  margin-top: -20.5px;
+  margin-left: 15px;
+  z-index: 999;
+}
+
+/*---------------------------------------------------------------------------------------------
+*
+*  Premium page style
+*
+*---------------------------------------------------------------------------------------------*/
+.WPCC-upgrade-msg{
+	border-left: 6px solid #D091BE !important;
+	background: #FFFFD4;
+	padding: 1px 8px;
+	margin-bottom: 20px;
+}
+.WPCC-check-list{
+	background: url("../images/check_ok.png") no-repeat;
+	padding-left: 20px;
+	margin-left: 20px;
+}
+.WPCC-vertical-box{
+	float: left;
+	background: #f9f9f9;
+	width: 28%;
+	margin:5px 15px;
+	min-height: 350px;
+}
+.WPCC-vertical-box > a{
+	text-decoration: none;
+}
+.WPCC-vertical-box-head{
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	padding: 12px;
+	background: #69ADE2;
+	border-radius: 8px;
+}
+.WPCC-vertical-box-line1{
+	text-align: center;
+	margin-top: 20px;
+}
+.WPCC-vertical-box-line2{
+	text-align: center;
+	margin-top: 50px;
+}

@@ -1,0 +1,26 @@
+#registration-table {
+    width: 95%;
+    margin: auto;
+}
+
+.id {
+    width: 50px;
+    text-align: center;
+}
+
+.team-name {
+    width: 300px;
+}
+
+.team-date {
+    width: 200px;
+}
+
+.reg-button {
+    width: 80px;
+    text-align: center;
+}
+
+#clock {
+    font-size: 1.5em;
+}

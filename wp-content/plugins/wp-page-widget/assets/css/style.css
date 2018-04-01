@@ -1,0 +1,99 @@
+/* Liquid layout */
+.liquid-left {
+	float: left;
+	width: 100%;
+	margin-right: -325px;
+}
+
+.liquid-right {
+	float: right;
+	width: 300px;
+}
+
+.panel-left {
+	margin-right: 325px;
+	margin-left: 5px;
+}
+
+.panel-right {
+	margin: 0 auto;
+	width: 285px;
+}
+
+.panel-box {
+	border-bottom-left-radius: 6px 6px;
+	border-bottom-right-radius: 6px 6px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DFDFDF;
+	border-top-left-radius: 6px 6px;
+	border-top-right-radius: 6px 6px;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+
+.panel-box .handlediv {
+	float: right;
+	height: 26px;
+	width: 23px;
+}
+
+.panel-box .hndle {
+	border-top-left-radius: 6px 6px;
+	border-top-right-radius: 6px 6px;
+	background: #DFDFDF url(../../../../../wp-admin/images/gray-grad.png) repeat-x 0% 0%;
+	font-size: 12px;
+	color: #464646;
+	font-weight: bold;
+	line-height: 1;
+	margin: 0px;
+	padding: 7px 9px;
+	-webkit-user-select: none;
+}
+
+.panel-box .inside {
+	margin: 10px;
+	position: relative;
+}
+
+/* Donation message */
+#donation-message {
+	background-color: lightYellow;
+	border-color: #E6DB55;
+	border-bottom-left-radius: 3px 3px;
+	border-bottom-right-radius: 3px 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-top-left-radius: 3px 3px;
+	border-top-right-radius: 3px 3px;
+	padding: 0px 0.6em;
+}
+
+#donation-message p {
+	font-size: 12px !important;
+}
+
+.postbox h3 {
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0;
+	padding: 7px 10px;
+	font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+}
+
+.widget .widget-title .new-widget-action{
+	display: block;
+	height: 43px;
+	position: absolute;
+	right: 0;
+	width: 43px;
+}
+.widget .widget-title .new-widget-action:after{
+	content:"";
+}
+
+/*	Simple Link List Widget plugin	*/
+.sllw-edit-item {
+	max-width: 390px;
+}

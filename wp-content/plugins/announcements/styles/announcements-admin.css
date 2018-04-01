@@ -1,0 +1,20 @@
+#announcements-navigation {
+    width: 95%;
+}
+
+.announcements-table {
+    margin-top: 10px;
+}
+
+.ann-label {
+    display: block;
+}
+
+.ann-text {
+    width:30%;
+    height: 100px;
+}
+
+#wp-ann_text-wrap {
+    width: 70%;
+}

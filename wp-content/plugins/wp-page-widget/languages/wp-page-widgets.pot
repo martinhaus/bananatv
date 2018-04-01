@@ -1,0 +1,215 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp_page_widgets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-18 09:15+0100\n"
+"PO-Revision-Date: 2014-04-18 10:48+0100\n"
+"Last-Translator: Roy Janssen <info@rjnetwork.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp-page-widgets.php:120
+msgid "Select an Image"
+msgstr ""
+
+#: wp-page-widgets.php:121
+msgid "Insert Into Widget"
+msgstr ""
+
+#: wp-page-widgets.php:162
+#: wp-page-widgets.php:174
+msgid "Page Widgets"
+msgstr ""
+
+#: wp-page-widgets.php:179
+msgid "Search page"
+msgstr ""
+
+#: wp-page-widgets.php:189
+msgid "Saved Changes"
+msgstr ""
+
+#: wp-page-widgets.php:197
+msgid "Settings - Page Widgets"
+msgstr ""
+
+#: wp-page-widgets.php:205
+msgid "Would you like to make a donation?"
+msgstr ""
+
+#: wp-page-widgets.php:207
+msgid "Yes I have donated at least $5. Thank you for your nice work. And hide the donation message please."
+msgstr ""
+
+#: wp-page-widgets.php:207
+msgid "Donate Now"
+msgstr ""
+
+#: wp-page-widgets.php:209
+msgid "No, I want to use this without donation."
+msgstr ""
+
+#: wp-page-widgets.php:214
+msgid "Available for post type"
+msgstr ""
+
+#: wp-page-widgets.php:226
+msgid "Which sidebars you want to customize"
+msgstr ""
+
+#: wp-page-widgets.php:237
+msgid "Select Customize by default (when adding new)"
+msgstr ""
+
+#: wp-page-widgets.php:239
+msgid "Yes, I want to select Customize when adding new things."
+msgstr ""
+
+#: wp-page-widgets.php:241
+msgid "No, I want to select Default setting when adding new things."
+msgstr ""
+
+#: wp-page-widgets.php:276
+#: wp-page-widgets.php:341
+#: wp-page-widgets.php:466
+#: wp-page-widgets.php:534
+#: wp-page-widgets.php:612
+#: wp-page-widgets.php:676
+#: wp-page-widgets.php:755
+#: wp-page-widgets.php:820
+msgid "Inactive Widgets"
+msgstr ""
+
+#: wp-page-widgets.php:297
+msgid "Page widgets for Search page"
+msgstr ""
+
+#: wp-page-widgets.php:299
+msgid "Click to toggle"
+msgstr ""
+
+#: wp-page-widgets.php:300
+msgid "Widgets area"
+msgstr ""
+
+#: wp-page-widgets.php:305
+#: wp-page-widgets.php:497
+#: wp-page-widgets.php:639
+#: wp-page-widgets.php:783
+msgid "Thank you for using this plugin. If you appreciate our works, please consider to"
+msgstr ""
+
+#: wp-page-widgets.php:305
+#: wp-page-widgets.php:497
+#: wp-page-widgets.php:639
+#: wp-page-widgets.php:783
+msgid "donate us"
+msgstr ""
+
+#: wp-page-widgets.php:305
+#: wp-page-widgets.php:497
+#: wp-page-widgets.php:639
+#: wp-page-widgets.php:783
+msgid "With your help, we can continue supporting and developing this plugin."
+msgstr ""
+
+#: wp-page-widgets.php:305
+#: wp-page-widgets.php:497
+#: wp-page-widgets.php:639
+#: wp-page-widgets.php:783
+msgid "Hide this donation message"
+msgstr ""
+
+#: wp-page-widgets.php:311
+#: wp-page-widgets.php:504
+msgid "Default"
+msgstr ""
+
+#: wp-page-widgets.php:311
+#: wp-page-widgets.php:504
+msgid "follow"
+msgstr ""
+
+#: wp-page-widgets.php:311
+#: wp-page-widgets.php:504
+#: wp-page-widgets.php:646
+#: wp-page-widgets.php:790
+msgid "Widgets settings"
+msgstr ""
+
+#: wp-page-widgets.php:312
+#: wp-page-widgets.php:505
+#: wp-page-widgets.php:647
+#: wp-page-widgets.php:791
+msgid "Customize"
+msgstr ""
+
+#: wp-page-widgets.php:326
+#: wp-page-widgets.php:519
+#: wp-page-widgets.php:661
+#: wp-page-widgets.php:805
+msgid "Available Widgets"
+msgstr ""
+
+#: wp-page-widgets.php:326
+#: wp-page-widgets.php:519
+#: wp-page-widgets.php:661
+#: wp-page-widgets.php:805
+msgid "Deactivate"
+msgstr ""
+
+#: wp-page-widgets.php:329
+#: wp-page-widgets.php:522
+#: wp-page-widgets.php:664
+#: wp-page-widgets.php:808
+msgid "Drag widgets from here to a sidebar on the right to activate them. Drag widgets back here to deactivate them and delete their settings."
+msgstr ""
+
+#: wp-page-widgets.php:356
+#: wp-page-widgets.php:548
+#: wp-page-widgets.php:690
+#: wp-page-widgets.php:834
+msgid "Drag widgets here to remove them from the sidebar but keep their settings."
+msgstr ""
+
+#: wp-page-widgets.php:416
+msgid "Page widgets for Front page - only latest posts option"
+msgstr ""
+
+#: wp-page-widgets.php:422
+msgid "Enable for drag edit Category"
+msgstr ""
+
+#: wp-page-widgets.php:429
+msgid "Save Changes"
+msgstr ""
+
+#: wp-page-widgets.php:778
+msgid "Widgets"
+msgstr ""
+
+#: wp-page-widgets.php:917
+msgid "Updated search page option."
+msgstr ""
+
+#: wp-page-widgets.php:979
+msgid "This user is not have access to edit theme options"
+msgstr ""
+
+#: wp-page-widgets.php:984
+msgid "Not post, taxonomy or search page."
+msgstr ""
+
+#: wp-page-widgets.php:1022
+msgid "Not save ajax widgets order"
+msgstr ""
+
+#: wp-page-widgets.php:1060
+msgid "An error has occured. Please reload the page and try again."
+msgstr ""
+

@@ -1,0 +1,37 @@
+.timetable-main {
+    color: #00354b ;
+    font-size: 52px;
+    font-family: 'Catamaran', sans-serif;
+    width: 100%;
+    margin: auto;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.timetable-highlight {
+    color: orangered;
+}
+
+.timetable-info {
+    color: #d9e5ee;
+}
+
+#current_lesson{
+  /*  color: #080c1c;
+    background-color: #d9e5ee ; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+#next_lesson {
+    /*color: #080c1c;
+     background-color: #d9e5ee ; */
+    padding: 10px 10px 10px 10px;
+}
+
+#room_name{
+    text-align: center;
+    font-weight: bold;
+    font-size: 64px;
+}

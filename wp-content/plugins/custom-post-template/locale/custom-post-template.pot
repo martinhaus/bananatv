@@ -1,0 +1,48 @@
+# Translation of the WordPress plugin   by .
+# Copyright (C) 2010 
+# This file is distributed under the same license as the  package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/custom-post-template\n"
+"POT-Creation-Date: 2010-06-17 15:32+0000\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: custom-post-templates.php:48 view/admin/select_post_template.php:2
+msgid "Post Template"
+msgstr ""
+
+#: plugin.php:660
+msgid "How many widgets would you like?"
+msgstr ""
+
+#: plugin.php:667
+msgid "Save"
+msgstr ""
+
+#: view/admin/select_post_template.php:13
+msgid "Default Template"
+msgstr ""
+
+#: view/admin/select_post_template.php:25
+#, php-format
+msgid ""
+"This theme has some <a href=\"%s\" target=\"_blank\">custom post templates</"
+"a> that you can use to on individual posts, you can select one for this post "
+"using the drop down above."
+msgstr ""
+
+#: view/admin/select_post_template.php:29
+#, php-format
+msgid ""
+"This theme has no available <a href=\"%s\" target=\"_blank\">custom post "
+"templates</a>."
+msgstr ""

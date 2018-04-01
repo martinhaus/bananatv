@@ -1,0 +1,19 @@
+/*	Fix widget width when moving to sort	*/
+#pw-sidebars-customize .widget-liquid-right {
+	/*width: 38%;*/
+}
+.widget .widget-title .new-widget-action{
+	display: block;
+	height: 43px;
+	position: absolute;
+	right: 0;
+	width: 43px;
+}
+.widget .widget-title .new-widget-action:after{
+	content:"";
+}
+
+/*	Simple Link List Widget plugin	*/
+.sllw-edit-item {
+	max-width: 390px;
+}

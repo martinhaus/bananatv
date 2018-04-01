@@ -1,0 +1,297 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Cron Manager\n"
+"POT-Creation-Date: 2015-04-29 11:37+0100\n"
+"PO-Revision-Date: 2015-04-29 11:39+0100\n"
+"Last-Translator: Jakub Mikita <kuba@wordpressgeeks.co.uk>\n"
+"Language-Team: Kuba Mikita <contact@jmikita.com>\n"
+"Language: Polish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../functions.php:26
+msgid "At next page refresh"
+msgstr "Przy następnym odświeżeniu strony"
+
+#: ../functions.php:28
+msgid "In"
+msgstr "Za"
+
+#: ../functions.php:34
+msgid "ago"
+msgstr "temu"
+
+#: ../inc/ajax.php:29 ../inc/ajax.php:79 ../inc/ajax.php:102
+#: ../inc/ajax.php:160 ../inc/ajax.php:182 ../inc/ajax.php:204
+#: ../inc/ajax.php:258
+msgid "Sorry, wrong noonce."
+msgstr "Zły noonce."
+
+#: ../inc/ajax.php:32
+msgid "Sorry, interval can't be less than 1 second."
+msgstr "Interwał nie może być mniejszy niż jedna sekunda"
+
+#: ../inc/ajax.php:35
+msgid "Sorry, Schedule name can't be numeric."
+msgstr "Nazwa harmonogramu nie może być numerem."
+
+#: ../inc/ajax.php:48
+#, php-format
+msgid "Sorry, there already is %s schedule."
+msgstr "Harmonogram %s już istnieje."
+
+#: ../inc/ajax.php:52
+#, php-format
+msgid "Sorry, there already is schedule with %1$s seconds interval (%2$s)."
+msgstr "Harmonogram z interwałem %1$s sekund już istnieje (%2$s)."
+
+#: ../inc/ajax.php:64 ../inc/main.php:306
+#, php-format
+msgid "Are you sure you want to delete %s schedule?"
+msgstr "Na pewno chcesz usunąć harmonogram %s?"
+
+#: ../inc/ajax.php:84
+msgid "Sorry, there is no schedule to remove."
+msgstr "Przepraszam, nie ma żadnego harmonogramu do usunięcia."
+
+#: ../inc/ajax.php:106
+msgid "Task hook can't be empty."
+msgstr "Nazwa zadania nie może być pusta."
+
+#: ../inc/ajax.php:110
+msgid "Schedule name can't be empty."
+msgstr "Nazwa harmonogramu nie może być pusta."
+
+#: ../inc/ajax.php:123 ../inc/ajax.php:130 ../inc/ajax.php:276
+msgid "Sorry, something goes wrong."
+msgstr "Przepraszam, coś poszło nie tak."
+
+#: ../inc/ajax.php:147 ../inc/main.php:389
+msgid "Execute"
+msgstr "Wykonaj"
+
+#: ../inc/ajax.php:168
+msgid "Sorry, it's wrong data to remove"
+msgstr "Złe dane do usunięcia."
+
+#: ../inc/ajax.php:172
+msgid "Removed."
+msgstr "Usunięte."
+
+#: ../inc/ajax.php:231
+msgid "Couldn't activate your license file. Please try again."
+msgstr "Licencja nie mogła zostać aktywowana. Spróbuj ponownie."
+
+#: ../inc/ajax.php:236
+msgid "Wrong license key. Please ensure you entered correct one."
+msgstr ""
+"Zły klucz licencji. Upewnij się proszę czy podany został poprawny klucz."
+
+#: ../inc/ajax.php:294
+msgid "License couldn't be deactivated. Please try again."
+msgstr "Licencja nie mogła zostać deaktywowana. Spróbuj ponownie."
+
+#: ../inc/main.php:100
+msgid "Advanced Cron Manager"
+msgstr "Advanced Cron Manager"
+
+#: ../inc/main.php:142
+msgid "Schedule added successfully."
+msgstr "Harmonogram pomyślnie dodany."
+
+#: ../inc/main.php:143
+msgid "Schedule removed successfully."
+msgstr "Harmonogram pomyślnie usunięty."
+
+#: ../inc/main.php:144
+msgid "Task added successfully."
+msgstr "Zadanie pomyślnie dodane."
+
+#: ../inc/main.php:145
+msgid "Task removed successfully."
+msgstr "Zadanie pomyślnie usunięte."
+
+#: ../inc/main.php:146
+msgid "Task executed successfully."
+msgstr "Zadanie pomyślnie wykonane."
+
+#: ../inc/main.php:147
+msgid "Settings saved successfully."
+msgstr "Ustawienia zapisane pomyślnie."
+
+#: ../inc/main.php:148
+msgid "License deactivated successfully."
+msgstr "Licencja deaktywowana pomyślnie."
+
+#: ../inc/main.php:162
+msgid "Logs"
+msgstr "Logi"
+
+#: ../inc/main.php:164
+msgid "Log cron executions with Advanced Cron Manager PRO"
+msgstr "Zapisuj wywołania zadań cron z Advanced Cron Manager PRO"
+
+#: ../inc/main.php:165
+msgid ""
+"Until 1st June 2015 only <strong><strike>$19.99</strike></strong> $14.99!"
+msgstr ""
+"Przed 1 czerwca 2015 tylko <strong><strike>$19.99</strike></strong> $14.99!"
+
+#: ../inc/main.php:178
+msgid "Cron Schedules"
+msgstr "Harmonogramy Crona"
+
+#: ../inc/main.php:185
+msgid "Informations"
+msgstr "Informacje"
+
+#: ../inc/main.php:196
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: ../inc/main.php:207
+msgid "Check this out!"
+msgstr "Warte uwagi!"
+
+#: ../inc/main.php:218
+msgid ""
+"Please remember - after deactivation of this plugin added Schedules "
+"<strong>will be not available</strong>. Added Tasks will still work."
+msgstr ""
+"Pamiętaj - po deaktywacji wtyczki dodane harmonogramy <strong>nie będą "
+"dostępne</strong>. Dodane zadania zostaną normalnie wykonane."
+
+#: ../inc/main.php:222
+msgid ""
+"Important - WordPress Cron is depended on the User. WP Cron fires "
+"<strong>only on the page visit</strong> so it can be not accurate."
+msgstr ""
+"Uwaga - Cron WordPressa ściśle zależy od użytkownika. Jest on wykonywany "
+"<strong>tylko przy odwiedzinach</strong>, więc może nie być dokładny."
+
+#: ../inc/main.php:268
+msgid "Save"
+msgstr "Zapisz"
+
+#: ../inc/main.php:275
+msgid ""
+"Did you ever searched for beautiful minimalistic and non aggressive popup?"
+msgstr ""
+"Czy kiedykolwiek szukałeś pięknego, minimalistycznego i nie agresywnego "
+"popupa?"
+
+#: ../inc/main.php:278
+msgid "Install Popslide"
+msgstr "Zainstaluj Popslide"
+
+#: ../inc/main.php:278
+msgid "Try Popslide!"
+msgstr "Sprawdź Popslide!"
+
+#: ../inc/main.php:295
+msgid "Add Schedule"
+msgstr "Dodaj harmonogram"
+
+#: ../inc/main.php:304
+msgid "Schedule protected"
+msgstr "Harmonogram chroniony"
+
+#: ../inc/main.php:315
+msgid "Interval (seconds)"
+msgstr "Interwał (sekund)"
+
+#: ../inc/main.php:320
+msgid "Name"
+msgstr "Nazwa"
+
+#: ../inc/main.php:321
+msgid "weekly"
+msgstr "tygodniowy"
+
+#: ../inc/main.php:325
+msgid "Description"
+msgstr "Opis"
+
+#: ../inc/main.php:326
+msgid "Once weekly"
+msgstr "Raz na tydzień"
+
+#: ../inc/main.php:331
+msgid "Add schedule"
+msgstr "Dodaj harmonogram"
+
+#: ../inc/main.php:344 ../inc/main.php:354
+msgid "Hook"
+msgstr "Nazwa"
+
+#: ../inc/main.php:345 ../inc/main.php:355
+msgid "Schedule"
+msgstr "Harmonogram"
+
+#: ../inc/main.php:346 ../inc/main.php:356
+msgid "Arguments"
+msgstr "Argumenty"
+
+#: ../inc/main.php:347 ../inc/main.php:357
+msgid "Next execution"
+msgstr "Następne wykonanie"
+
+#: ../inc/main.php:348 ../inc/main.php:358
+msgid "Action"
+msgstr "Akcja"
+
+#: ../inc/main.php:385
+msgid "single"
+msgstr "pojedynczy"
+
+#: ../inc/main.php:407
+msgid "Add Task"
+msgstr "Dodaj zadanie"
+
+#: ../inc/main.php:415
+msgid "schedule_hook_for_action"
+msgstr "nazwa_haka_do_akcji"
+
+#: ../inc/main.php:419
+msgid "Execute now"
+msgstr "Wykonaj teraz"
+
+#: ../inc/main.php:421
+msgid "seconds"
+msgstr "sekund"
+
+#: ../inc/main.php:423
+msgid "Then repeat"
+msgstr "Poźniej powtarzaj"
+
+#: ../inc/main.php:428
+msgid "Don't repeat"
+msgstr "Nie powtarzaj"
+
+#: ../inc/main.php:434
+msgid "Add Argument"
+msgstr "Dodaj argument"
+
+#: ../inc/main.php:438
+msgid "Add task"
+msgstr "Dodaj zadanie"
+
+#: ../inc/main.php:454
+msgid "Task protected"
+msgstr "Zadanie chronione"
+
+#: ../inc/main.php:459
+#, php-format
+msgid "Are you sure you want to delete %s task?"
+msgstr "Na pewno chcesz usunąć zadanie %s?"
+
+#: ../inc/main.php:459
+msgid "Remove"
+msgstr "Usuń"

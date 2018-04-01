@@ -1,0 +1,56 @@
+.mhd-main {
+    color: white;
+    font-size: 48px;
+    font-family: 'Catamaran', sans-serif;
+    line-height: 90%;
+    font-weight: bold;
+    width: 100%;
+    margin: 10% auto;
+}
+
+.line-no {
+    width: 160px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+.stop-name {
+
+}
+
+.time {
+    font-family: 'Source Sans Pro', sans-serif;
+    float: right;
+    font-size: 90px;
+}
+
+.table {
+    table-layout: fixed;
+    width: inherit;
+    margin-top: 20px;
+}
+
+.dept-time {
+    width:230px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+
+.line-direction {
+    width: 80%;
+}
+
+.row {
+    display: none;
+    background-color: #dbdae8;
+    color: #080c1c;
+}
+
+.row-head {
+    background-color : #0f79ae;
+}
+
+table tbody tr:nth-child(-n+5){
+    display: table-row;
+}
