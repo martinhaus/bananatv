@@ -1,3 +1,9 @@
 wp-content/uploads
 wp-content/languages
 wp-content/upgrade
+dump_data.sh
+wp-content/plugins/akismet/
+wp-content/plugins/hello.php
+wp-content/themes/twentyfifteen/
+wp-content/themes/twentysixteen/
+wp-content/themes/twentyseventeen/
