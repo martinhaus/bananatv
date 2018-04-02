@@ -369,15 +369,15 @@ function page_rotation_check_for_redirect() {
 		$date_end = get_post_meta( $post->ID, 'poster_end_date', true );
 		$date_start = get_post_meta( $post->ID, 'poster_start_date', true );
 
-		/*
-		 * poster is before start date
-		 */
-		if (time() - strtotime( $date_start ) < 0 && $date_start > 0) {
-		    //Continue to next page immediately
-		    $display_time = 0;
+		// Apply only if in sequence or screen
+		if (isset($_GET['screen']) || isset($_GET['seq'])) {
+		    // Poster is accessed before end date
+            if (time() - strtotime($date_start) < 0 && $date_start > 0) {
+                //Continue to next page immediately
+                $display_time = 0;
+            }
         }
-		
-		
+
 		//Poster is past end date
 		if ( time() - strtotime( $date_end ) > 0 && $date_end > 0) {
 	        //Continue to next page immediately
@@ -387,7 +387,7 @@ function page_rotation_check_for_redirect() {
 			$table_name = $wpdb->prefix . "page_rotation_pages";
 			$sql = "SELECT DISTINCT (sequence_id) FROM $table_name
               WHERE page_id = $post->ID";
-            
+
 			$sequences = $wpdb->get_results($sql);
             //Delete poster from all sequences
 			foreach ($sequences as $sequence) {

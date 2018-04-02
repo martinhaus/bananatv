@@ -275,10 +275,11 @@ function media_upload_create_sequence_box() {
 function media_upload_create_zip_sequence($zip_url, $tags, $name, $timing) {
 	
     //Create new folder for the images
-	$path = wp_upload_dir()['path'] . '/' . $name . '/';
-	$temp_zip = $path . '/temp.zip';
+	$path = wp_upload_dir()['path'] . '/zip_' . $name . '/';
+	$temp_zip = $path . 'temp.zip';
 	wp_mkdir_p($path);
-	if(copy($zip_url, $temp_zip)) {
+    $file = wp_upload_dir()['path'] . '/' . pathinfo($zip_url)['basename'];
+	if(copy($file, $temp_zip)) {
 		$zip = new ZipArchive;
 		if ($zip->open($temp_zip, ZIPARCHIVE::CHECKCONS) == TRUE) {
 			$zip->extractTo($path);
@@ -319,7 +320,7 @@ function media_upload_create_zip_sequence($zip_url, $tags, $name, $timing) {
 				$img_name = '/' . $name .'-'.$i.'.jpg';
 				$i++;
 				$img->writeImage($path . $img_name);
-				$image_urls[] = wp_upload_dir()['url'] . '/' . $name . $img_name;
+				$image_urls[] = wp_upload_dir()['url'] . '/zip_' . $name . $img_name;
 				unlink($file);
             }
             $img->destroy();
@@ -330,14 +331,19 @@ function media_upload_create_zip_sequence($zip_url, $tags, $name, $timing) {
 
 function media_upload_create_pdf_sequence($pdf_url, $tags, $name, $timing) {
 	$image_urls = [];
-	
+
+    $path = wp_upload_dir()['path'] . '/';
+    $filename = pathinfo($pdf_url);
+    $file = $path .  $filename['basename'];
+
+
     $img = new imagick();
 	$img->setResolution(300,300);
-	$img->readImage($pdf_url);
+	$img->readImage($file);
 	$img->setImageCompressionQuality(100);
 	$num_pages = $img->getNumberImages();
 	$img->stripImage();
-    $path = wp_upload_dir()['path'] . '/' . $name;
+    $path = wp_upload_dir()['path'] . '/pdf_' . $name;
     wp_mkdir_p($path);
 	for($i = 0;$i < $num_pages; $i++) {
 		// Set iterator postion
@@ -350,7 +356,7 @@ function media_upload_create_pdf_sequence($pdf_url, $tags, $name, $timing) {
 		$img_name = '/' . $name .'-'.$i.'.jpg';
 		// Write Images to temp 'upload' folder
 		$img->writeImage($path . $img_name);
-		$image_urls[] = wp_upload_dir()['url'] . '/' . $name . $img_name;
+		$image_urls[] = wp_upload_dir()['url'] . '/pdf_' . $name . $img_name;
 	}
 	$img->destroy();
 	
@@ -384,7 +390,7 @@ function media_upload_insert_posters($sequence_id, $image_urls, $name, $tags, $t
     
     //Put every post into the sequence
     for($i=0; $i < count($image_urls); $i++) {
-        $post_id = media_upload_create_post($name . ' plagát - '. $i,$tags,$image_urls[$i], null);
+        $post_id = media_upload_create_post($name . ' plagát - '. $i,$tags,$image_urls[$i], null, null);
         media_upload_insert_poster_sequence($i,$post_id,count($image_urls),$timing,$sequence_id);
     }
     

@@ -150,7 +150,7 @@ jQuery(document).ready(function () {
                         iterator = 1;
                     }
                         for (var i = 0; i < number; ++i) {
-                            console.log(iterator);
+                            var x_icon = jQuery('#delete-all img').attr("src");
                             insert_row = clicked_row.clone(true);
                             insert_row.find('td.delete-all').remove();
                             insert_row.find('td.add-multiple').remove();
@@ -161,7 +161,7 @@ jQuery(document).ready(function () {
                             insert_row.append("<td class='time-input'><input name='pages-timing[]' value=" + time +
                                 " class='pages-timing' type='text'></td>");
                             insert_row.append("<td class='delete-one' style='padding-top: 12px;'><a href='#' id='delete-one'>" +
-                                "<img src='http://localhost/wordpress/wp-content/plugins/page-rotation/images/icons/x-icon.png' /></a></td>");
+                                "<img src=" + x_icon +" /></a></td>");
                             jQuery('#sequence-pages-table').find('tr').eq(iterator).after(insert_row);
 
                             iterator += iterator_original + 1;
@@ -170,7 +170,7 @@ jQuery(document).ready(function () {
 
                     dialog.dialog("close");
                 },
-                "Zruš": function() {
+                "Zrušiť": function() {
                     dialog.dialog( "close" );
                 }
             }
@@ -196,16 +196,14 @@ jQuery(document).ready(function () {
 jQuery( function() {
     jQuery( "#sequence-pages-table" ).find('tbody').sortable({
 
-
-    //    connectWith: "#all-pages-table tbody",
-
         items: "tr.item-row",
 
         receive: function (e, ui) {
             ui.sender.data('copied', true);
             sortableIn = 1;
+            var x_icon = jQuery('#delete-all img').attr("src");
             ui.item.append("<td class='time-input'><input name='pages-timing[]' class='pages-timing' type='text'></td>");
-            ui.item.append("<td class='delete-one' style='padding-top: 12px;'><a href='#' id='delete-one'><img src='http://localhost/wordpress/wp-content/plugins/page-rotation/images/icons/x-icon.png' /></a></td>");
+            ui.item.append("<td class='delete-one' style='padding-top: 12px;'><a href='#' id='delete-one'><img src='" + x_icon + "' /></a></td>");
             ui.item.find('td.delete-all').remove();
             ui.item.find('td.add-multiple').remove();
         },

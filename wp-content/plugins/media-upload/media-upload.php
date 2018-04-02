@@ -48,8 +48,8 @@ function media_upload_check_if_poster() {
 		
 		$date_start = get_post_meta( $post->ID, 'poster_start_date', true );
 		
-        // Check if poster is before start time, if true don't display the poster
-		if (time() - strtotime( $date_start ) < 0 && $date_start > 0) {
+        // Check if poster is before start time, if true don't display the poster (only in sequence)
+		if (time() - strtotime( $date_start ) < 0 && $date_start > 0 && isset($_GET['seq'])) {
 			$image_url = "";
 		}
 		
@@ -122,10 +122,19 @@ add_action('admin_enqueue_scripts', 'setup_jquery_scripts');
 
 function media_upload_check_num_of_pages() {
 	$pdf_url = $_GET['pdf'];
+
+    $path = wp_upload_dir()['path'] . '/';
+    $filename = pathinfo($pdf_url);
+    $file = $path .  $filename['basename'];
+
+    if (! is_readable($file)) {
+        echo 'file not readable';
+        exit();
+    }
+
+
 	$img = new imagick();
-	//$img->setResolution(300,300);
-	//$img->setImageCompressionQuality(100);
-	$img->readImage($pdf_url);
+	$img->readImage($file);
 	$num_of_pages = $img->getNumberImages();
 	echo json_encode($num_of_pages);
 	die();

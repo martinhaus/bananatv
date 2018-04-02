@@ -7,7 +7,6 @@ jQuery(document).ready(function($){
         e.preventDefault();
         var image = wp.media({
             title: 'Nahranie obsahu',
-            // mutiple: true if you want to upload multiple files at once
             multiple: false
         }).open()
             .on('select', function(e){
@@ -43,7 +42,8 @@ jQuery(document).ready(function($){
                                             "<h3>Názov súboru: " + file_name + "</h3>" +
                                             "<h3>Veľkosť: "+ size +"</h3>" +
                                             "<h4>Zo súboru bude vytvorená nová sekvencia</h4>";
-                                        jQuery('#datepicker').attr('disabled','true');
+                                        jQuery('#date_start').attr('disabled','true');
+                                        jQuery('#date_end').attr('disabled','true');
                                         jQuery('#sequence_box_overall').hide();
                                     }
                                     else if (pdf_url && pdf_pages == 1) {
@@ -99,7 +99,8 @@ jQuery(document).ready(function($){
                         "<h3>Názov súboru: " + file_name + "</h3>" +
                         "<h3>Veľkosť: "+ size +"</h3>" +
                         "<h4>Zo súboru bude vytvorená nová sekvencia</h4>";
-                    jQuery('#datepicker').attr('disabled','true');
+                    jQuery('#date_start').attr('disabled','true');
+                    jQuery('#date_end').attr('disabled','true');
                     jQuery('#sequence_box_overall').hide();
                 }
                 jQuery('#thumbnail').prepend(html);
