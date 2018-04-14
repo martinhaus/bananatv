@@ -42,7 +42,8 @@ class Page_Overview_List extends WP_List_Table {
 			 and  meta_key != 'screen'
 			 and meta_key != 'screen_task'
 			 and meta_key !='sequence_id'
-			 and meta_key !='screen_id'";
+			 and meta_key !='screen_id'
+			 and meta_key !='_wp_attached_file'";
 		}
 		if ( ! empty( $_REQUEST['orderby'] ) ) {
 			$sql .= ' ORDER BY ' . esc_sql( $_REQUEST['orderby'] );
