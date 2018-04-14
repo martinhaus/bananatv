@@ -28,8 +28,10 @@ function page_rotation_overview_page() {
     <div id="dialog-delete" title="Zmazať záznam?">
         <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Ste si istý, že chcete zmazať tento záznam? Krok sa nedá vrátiť naspäť.</p>
     </div>
-	<h1>Prehľad stránok</h1>
-	
+    <div class="wrap">
+	    <h1 style="display: inline-block">Prehľad stránok</h1>
+        <a href="post-new.php?post_type=page"" class="page-title-action">Pridať novú</a>
+    </div>
 <?php
 	
 	$table = new Page_Overview_List();

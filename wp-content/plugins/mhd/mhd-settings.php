@@ -148,7 +148,13 @@ function mhd_parse_free_days() {
 	$state_holidays = "http://kalendar.azet.sk/sviatky/";
 
 	require_once( plugin_dir_path(__FILE__) . 'simplehtmldom/simple_html_dom.php');
-	$html = file_get_html($state_holidays);
+
+    $ch = curl_init($state_holidays);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $respone = curl_exec($ch);
+    curl_close($ch);
+
+    $html = str_get_html($respone);
 
 	//Parse state holidays
 	foreach ($html->find('a') as $element) {
@@ -168,7 +174,13 @@ function mhd_parse_free_days() {
 	}
 
 	//Parse school holidays
-	$html = file_get_html($school_holidays);
+    
+    $ch = curl_init($school_holidays);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $respone = curl_exec($ch);
+    curl_close($ch);
+
+    $html = str_get_html($respone);
 
 	foreach ($html->find('tr') as $element) {
 		//If not empty string and not regional holiday outside Bratislava
