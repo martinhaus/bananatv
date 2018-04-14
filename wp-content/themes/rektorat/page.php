@@ -14,7 +14,6 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
-    <h2 style='text-align: center; font-family: Montserrat, "Helvetica Neue", sans-serif; font-size: 2em;'>SKÚŠOBNÁ PREVÁDZKA</h2>
 	<main id="main" class="site-main" role="main">
 		<?php
 		// Start the loop.
