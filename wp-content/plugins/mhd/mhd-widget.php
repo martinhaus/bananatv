@@ -142,7 +142,6 @@ class mhd_widget extends WP_Widget {
 		<script type="text/javascript">
 		             jQuery(document).ready(function () {
 			             jQuery('.content-area').css('width','100%');
-			             console.log('aaa');
 		             });
         </script>
         

@@ -292,6 +292,7 @@ function mhd_settings_page() {
 		foreach ($all_buses as $bus) {
 			mhd_parse_timetable( $bus, $stop_entry_id );
 		}
+		mhd_create_stop_wp_page($stop_entry_id, $stop_name);
 	}
 
 	if(isset($_POST['sviatky'])) {
@@ -338,6 +339,33 @@ function mhd_settings_page() {
 	<?php
 }
 
+/**
+ * Creates a default page with loaded MHD widget
+ * @param $stop_id
+ * @param $stop_name
+ * @return mixed
+ */
+function mhd_create_stop_wp_page($stop_id, $stop_name) {
+
+    $post_id = wp_insert_post([
+       "post_title" => "MHD - {$stop_name}",
+        "post_type" => "page",
+        "post_content" => "[mhd id='{$stop_id}']"
+    ]);
+
+//    $wp_postmeta_key = "_sidebars_widgets";
+//    $wp_postmeta_value = "a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-2\";a:1:{i:0;s:12:\"mhd_widget-2\";}s:13:\"array_version\";i:3;}";
+//    $wp_postmeta_sidebar_enabled_key = "_customize_sidebars";
+//    $wp_postmeta_sidebar_enabled_value = "1";
+//    $wp_options_key = "widget_{$post_id}_mhd_widget";
+//    $wp_options_value = "{i:2;a:1:{s:5:\"stops\";s:1:\"{$stop_id}\";}s:12:\"_multiwidget\";i:1;}";
+//
+//    add_post_meta($post_id, $wp_postmeta_key, $wp_postmeta_value);
+//    add_post_meta($post_id, $wp_postmeta_sidebar_enabled_key, $wp_postmeta_sidebar_enabled_value);
+//    add_option($wp_options_key, $wp_options_value);
+
+    return $post_id;
+}
 
 function mhd_register_settings_scripts() {
 	//For warnings
