@@ -49,6 +49,7 @@ function timetables_delete($row_id) {
 
 function timetables_create_db_entry($parsed_timetable) {
 	$term = timetables_get_last_term_name();
+
 	$room = $parsed_timetable[0]->getRoom();
 
 	global $wpdb;
@@ -318,7 +319,7 @@ function timetables_get_whole_timetable( $selected ) {
 	/*
 	 * Get whole page with all options using curl
 	 */
-	$ch = curl_init('http://is.stuba.sk/katalog/rozvrhy_view.pl');
+	$ch = curl_init('https://is.stuba.sk/katalog/rozvrhy_view.pl');
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 	curl_setopt($ch, CURLOPT_ENCODING ,"UTF-8");
@@ -374,7 +375,7 @@ function timetables_get_all_timetable_options() {
 	/*
 	 * Get whole page with all options using curl
 	 */
-	$ch = curl_init('http://is.stuba.sk/katalog/rozvrhy_view.pl');
+	$ch = curl_init('https://is.stuba.sk/katalog/rozvrhy_view.pl');
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 	$respone = curl_exec($ch);
@@ -438,7 +439,13 @@ function timetables_settings_login_markup() {
 function timetables_get_all_terms() {
 
 	require_once(plugin_dir_path(__FILE__) . 'simplehtmldom/simple_html_dom.php');
-	$html = file_get_html('http://is.stuba.sk/katalog/rozvrhy_view.pl?konf=1;f=70;lang=sk');
+	
+	$ch = curl_init('https://is.stuba.sk/katalog/rozvrhy_view.pl?konf=1;f=70;lang=sk');
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$respone = curl_exec($ch);
+	curl_close($ch);
+
+	$html = str_get_html($respone);
 
 	return $html;
 }
