@@ -16,18 +16,25 @@
     color: #d9e5ee;
 }
 
-#current_lesson{
-  /*  color: #080c1c;
-    background-color: #d9e5ee ; */
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px 10px 10px 10px;
+.acronym {
+    color: #d9e5ee;
+    font-size: 70px;
+    text-align: center;
+    display: block;
 }
 
-#next_lesson {
-    /*color: #080c1c;
-     background-color: #d9e5ee ; */
+.lesson {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 48%;
     padding: 10px 10px 10px 10px;
+    display: inline-block;
+    flex: 1;
+}
+
+.lessons {
+    text-align: center;
+    display: flex;
 }
 
 #room_name{
