@@ -44,10 +44,10 @@ class timetable_widget extends WP_Widget {
 			<div id="room_name">
 			<?php
 
-		$sql = "SELECT room from wp_timetables_timetables WHERE id = $room";
-		$room_name = $wpdb->get_results($sql);
-		echo "<span class='timetable-info'> Miestnosť: " . $room_name[0]->room . "</span>";
-		echo "</div>";
+			// $sql = "SELECT room from wp_timetables_timetables WHERE id = $room";
+			// $room_name = $wpdb->get_results($sql);
+			// echo "<span class='timetable-info'> Miestnosť: " . $room_name[0]->room . "</span>";
+			echo "</div>";
 
 
 		$sql = "SELECT name,teacher,date_format(start_time,'%H:%i') as start_time,date_format(end_time,'%H:%i') as end_time,TIME_TO_SEC(end_diff) as end_diff  FROM(
@@ -68,7 +68,7 @@ class timetable_widget extends WP_Widget {
 		$time_till_end ="";
 		foreach ( $pending as $key => $row ) {
 			echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . "</span><br>";
-			echo "<span class='timetable-info'>" . $row->name . "</span><br>";
+			// echo "<span class='timetable-info'>" . $row->name . "</span><br>";
 			echo "<span class='timetable-info'>" . $row->teacher . "</span><br>";
 			echo "<span class='timetable-info'>" .$row->start_time . " - " . $row->end_time . "</span><br>";
 			$time_till_end = $row->end_diff;
@@ -104,7 +104,7 @@ class timetable_widget extends WP_Widget {
 		$time_till_end ="";
 		foreach ($next_hour as $key => $row) {
 			echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . "</span><br>";
-			echo "<span class='timetable-info'>" . $row->name . "</span><br>";
+			// echo "<span class='timetable-info'>" . $row->name . "</span><br>";
 			echo "<span class='timetable-info'>" . $row->teacher . "</span><br>";
 			echo "<span class='timetable-info'>" . $row->start_time . " - " . $row->end_time . "</span><br>";
 
