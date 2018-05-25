@@ -33,13 +33,15 @@
 }
 
 .lesson:nth-child(3) {
-    /* background-color: #1999c4; */
+    /* background-color: rgb(15, 194, 255); */
+    background-color:rgb(0, 164, 219);
     border-left: dashed 1px black;
 }
 
 .lesson:nth-child(even) {
     /* background-color: #1999c4; */
     border-left: dashed 1px black;
+    line-height: 1.;
 }
 
 
@@ -50,7 +52,7 @@
 }
 
 .lessons:nth-child(odd) {
-    background-color: #1999c4;
+    /* background-color: #1999c4; */
 }
 
 #room_name{
@@ -75,4 +77,8 @@
 .site-inner {
     width: 100% !important;
     max-width: 100% !important;
+}
+
+.lesson-title {
+    font-size: 0.7em;
 }

@@ -68,10 +68,13 @@ class timetable_widget extends WP_Widget {
 			echo "<div id='current_lesson' class='lesson'>";
 			$time_till_end ="";
 			foreach ( $pending as $key => $row ) {
-				echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . "</span><br>";
-				// echo "<span class='timetable-info'>" . $row->name . "</span><br>";
-				echo "<span class='timetable-info'>" . $row->teacher . "</span><br>";
-				echo "<span class='timetable-info'>" .$row->start_time . " - " . $row->end_time . "</span><br>";
+				// echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . "</span><br>"; 
+				echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . " - </span>  "; 
+				echo "<span class='timetable-info acronym'>" . $row->teacher . "</span><br>";
+				echo "<span class='timetable-info lesson-title'>" . $row->name . "</span><br>";
+				// echo "<span class='timetable-info'>" . $row->teacher . "</span><br>";
+				// echo "<span class='timetable-info'>" .$row->start_time . " - " . $row->end_time . "</span><br>";
+				echo "<span class='timetable-info'>" .$row->start_time . " - " . $row->end_time . "</span>";
 				$time_till_end = $row->end_diff;
 			}
 
@@ -82,7 +85,7 @@ class timetable_widget extends WP_Widget {
 				$id = chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) );
 				?>
 				<!-- Do konca zostáva  <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span><br> -->
-				<span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span><br>
+				<span class='timetable-info'>(</span> <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span> <span class='timetable-info'>)</span><br>
 				<script
 					type="text/javascript">startTimer(<?php echo abs( $time_till_end ) ?>, document.querySelector('#<?php echo $id ?>'));</script>
 				<?php
@@ -105,9 +108,11 @@ class timetable_widget extends WP_Widget {
 			$next_hour = $wpdb->get_results($sql);
 			$time_till_end ="";
 			foreach ($next_hour as $key => $row) {
-				echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . "</span><br>";
-				// echo "<span class='timetable-info'>" . $row->name . "</span><br>";
-				echo "<span class='timetable-info'>" . $row->teacher . "</span><br>";
+				// echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . "</span><br>";
+				echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . " - </span>  "; 
+				echo "<span class='timetable-info acronym'>" . $row->teacher . "</span><br>";
+				echo "<span class='timetable-info lesson-title'>" . $row->name . "</span><br>";
+				// echo "<span class='timetable-info'>" . $row->teacher . "</span><br>";
 				echo "<span class='timetable-info'>" . $row->start_time . " - " . $row->end_time . "</span><br>";
 
 				$time_till_end = $row->diff;
@@ -121,7 +126,7 @@ class timetable_widget extends WP_Widget {
 				$id = chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) );
 				?>
 				<!-- Do začiatku zostáva  <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span> -->
-				<span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span>
+				Začína o <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span>
 				<script
 					type="text/javascript">startTimer(<?php echo abs( $time_till_end ) ?>, document.querySelector('#<?php echo $id ?>'));</script>
 				<?php
