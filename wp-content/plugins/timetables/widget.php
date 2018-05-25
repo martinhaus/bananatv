@@ -68,24 +68,21 @@ class timetable_widget extends WP_Widget {
 			echo "<div id='current_lesson' class='lesson'>";
 			$time_till_end ="";
 			foreach ( $pending as $key => $row ) {
-				// echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . "</span><br>"; 
 				echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . " - </span>  "; 
 				echo "<span class='timetable-info acronym'>" . $row->teacher . "</span><br>";
 				echo "<span class='timetable-info lesson-title'>" . $row->name . "</span><br>";
-				// echo "<span class='timetable-info'>" . $row->teacher . "</span><br>";
-				// echo "<span class='timetable-info'>" .$row->start_time . " - " . $row->end_time . "</span><br>";
-				echo "<span class='timetable-info'>" .$row->start_time . " - " . $row->end_time . "</span>";
+				echo "<span class='timetable-info time-left'>" .$row->start_time . " - " . $row->end_time . "</span>";
 				$time_till_end = $row->end_diff;
 			}
 
 			if(!$pending) {
-				echo "";
+				echo "<div class='timetable-free'>výuka neprebieha</div>";
 			} else {
 
 				$id = chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) );
 				?>
 				<!-- Do konca zostáva  <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span><br> -->
-				<span class='timetable-info'>(</span> <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span> <span class='timetable-info'>)</span><br>
+				<div class="time-right" >končí o <span id="<?php echo $id ?>" class="timetable-highlight-green"><?php echo floor(abs($time_till_end) / 60) ?></span> minút</div>
 				<script
 					type="text/javascript">startTimer(<?php echo abs( $time_till_end ) ?>, document.querySelector('#<?php echo $id ?>'));</script>
 				<?php
@@ -113,20 +110,20 @@ class timetable_widget extends WP_Widget {
 				echo "<span class='timetable-info acronym'>" . $row->teacher . "</span><br>";
 				echo "<span class='timetable-info lesson-title'>" . $row->name . "</span><br>";
 				// echo "<span class='timetable-info'>" . $row->teacher . "</span><br>";
-				echo "<span class='timetable-info'>" . $row->start_time . " - " . $row->end_time . "</span><br>";
+				echo "<span class='timetable-info time-left'>" . $row->start_time . " - " . $row->end_time . "</span>";
 
 				$time_till_end = $row->diff;
 			}
 
 			if(!$next_hour) {
-				echo "Nasleduje: - <br>";
+				echo "";
 			} else {
 
 				//Print countdown timer
 				$id = chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) );
 				?>
 				<!-- Do začiatku zostáva  <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span> -->
-				Začína o <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span>
+				<div class="time-right" >začína o <span id="<?php echo $id ?>" class="timetable-highlight"><?php echo floor(abs($time_till_end) / 60) ?></span> minút</div>
 				<script
 					type="text/javascript">startTimer(<?php echo abs( $time_till_end ) ?>, document.querySelector('#<?php echo $id ?>'));</script>
 				<?php

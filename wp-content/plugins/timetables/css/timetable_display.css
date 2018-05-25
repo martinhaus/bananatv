@@ -8,12 +8,9 @@
     background-color: transparent;
 }
 
-.timetable-highlight {
-    color: orangered;
-}
-
 .timetable-info {
     color: #d9e5ee;
+    font-size: 70px;
 }
 
 .acronym {
@@ -48,7 +45,7 @@
 .lessons {
     text-align: center;
     display: flex;
-    line-height: 1.5;
+    line-height: 1.9;
 }
 
 .lessons:nth-child(odd) {
@@ -80,5 +77,39 @@
 }
 
 .lesson-title {
-    font-size: 0.7em;
+    font-size: 0.8em;
+}
+
+.time-left {
+    width: 49%;
+    /* margin-left: 10%; */
+    font-size: 1.1em;
+
+    float: left;
+}
+
+.time-right {
+    width: 49%;
+    /* margin-right: 10%; */
+    float: right;
+    font-size: 0.8em;
+    line-height: 2.4em;
+}
+
+.timetable-free {
+    opacity: 0.6;
+    line-height: 6.5em;
+}
+
+.timetable-highlight {
+    color: rgb(230, 99, 52);
+    font-size: 1em;
+    font-size: 1.5em;
+}
+
+.timetable-highlight-green {
+    color: rgb(6, 146, 6);
+    /* font-size: 70px; */
+    font-size: 1.5em;
+
 }
