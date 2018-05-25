@@ -23,21 +23,56 @@
 }
 
 .lesson {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
     width: 48%;
     padding: 10px 10px 10px 10px;
     display: inline-block;
     flex: 1;
+    border-bottom: dashed 1px black;
 }
+
+.lesson:nth-child(3) {
+    /* background-color: #1999c4; */
+    border-left: dashed 1px black;
+}
+
+.lesson:nth-child(even) {
+    /* background-color: #1999c4; */
+    border-left: dashed 1px black;
+}
+
 
 .lessons {
     text-align: center;
     display: flex;
+    line-height: 1.5;
+}
+
+.lessons:nth-child(odd) {
+    background-color: #1999c4;
 }
 
 #room_name{
     text-align: center;
     font-weight: bold;
     font-size: 64px;
+}
+
+.timetable_widget {
+    margin-top: 0px !important;
+}
+
+
+.room-name {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    font-size: 0.8em;
+    transform: rotate(270deg);
+}
+
+.site-inner {
+    width: 100% !important;
+    max-width: 100% !important;
 }
