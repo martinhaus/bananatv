@@ -14,6 +14,7 @@ function startTimer(duration, display) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = hours + ":" + minutes + ":" + seconds;
+        display.textContent = Math.trunc(timer / 60);
 
         if (--timer < 0) {
             timer = duration;

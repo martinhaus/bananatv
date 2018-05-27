@@ -8,30 +8,108 @@
     background-color: transparent;
 }
 
-.timetable-highlight {
-    color: orangered;
-}
-
 .timetable-info {
     color: #d9e5ee;
+    font-size: 70px;
 }
 
-#current_lesson{
-  /*  color: #080c1c;
-    background-color: #d9e5ee ; */
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px 10px 10px 10px;
+.acronym {
+    color: #d9e5ee;
+    font-size: 70px;
+    text-align: center;
 }
 
-#next_lesson {
-    /*color: #080c1c;
-     background-color: #d9e5ee ; */
+.lesson {
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+    width: 48%;
     padding: 10px 10px 10px 10px;
+    display: inline-block;
+    flex: 1;
+    border-bottom: dashed 1px black;
+}
+
+.lesson:nth-child(3) {
+    /* background-color: rgb(15, 194, 255); */
+    background-color:rgb(0, 164, 219);
+    border-left: dashed 1px black;
+}
+
+.lesson:nth-child(even) {
+    /* background-color: #1999c4; */
+    border-left: dashed 1px black;
+    line-height: 1.;
+}
+
+
+.lessons {
+    text-align: center;
+    display: flex;
+    line-height: 1.9;
+}
+
+.lessons:nth-child(odd) {
+    /* background-color: #1999c4; */
 }
 
 #room_name{
     text-align: center;
     font-weight: bold;
     font-size: 64px;
+}
+
+.timetable_widget {
+    margin-top: 0px !important;
+}
+
+
+.room-name {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    font-size: 0.8em;
+    transform: rotate(270deg);
+}
+
+.site-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.lesson-title {
+    font-size: 0.8em;
+}
+
+.time-left {
+    width: 49%;
+    /* margin-left: 10%; */
+    font-size: 1.1em;
+
+    float: left;
+}
+
+.time-right {
+    width: 49%;
+    /* margin-right: 10%; */
+    float: right;
+    font-size: 0.8em;
+    line-height: 2.4em;
+}
+
+.timetable-free {
+    opacity: 0.6;
+    line-height: 6.5em;
+}
+
+.timetable-highlight {
+    color: rgb(230, 99, 52);
+    font-size: 1em;
+    font-size: 1.5em;
+}
+
+.timetable-highlight-green {
+    color: rgb(6, 146, 6);
+    /* font-size: 70px; */
+    font-size: 1.5em;
+
 }
