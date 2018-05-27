@@ -46,6 +46,7 @@ class timetable_widget extends WP_Widget {
 			<div id="room_name">
 			<?php
 			echo "</div>";
+		$rooms = array_filter($rooms);
 		foreach ($rooms as $room) {
 			
 			$sql = "SELECT room from wp_timetables_timetables WHERE id = $room";
@@ -172,6 +173,7 @@ class timetable_widget extends WP_Widget {
 		?>
 
 		<select id = <?php echo $this->get_field_id('room1'); ?> name=<?php echo $this->get_field_name('room1'); ?> class="widefat">
+			<option value="">--</option>
 			<?php
 			foreach ( $options as $key => $row ) {
 				$selected = ( $room1 == $row->id ) ?
@@ -193,7 +195,7 @@ class timetable_widget extends WP_Widget {
 		</select>
 
 		<select id = <?php echo $this->get_field_id('rooms'); ?> name=<?php echo $this->get_field_name('room3'); ?> class="widefat">
-			<option value=""></option>
+			<option value="">--</option>
 			<?php
 			foreach ( $options as $key => $row ) {
 				$selected = ( $room3 == $row->id ) ?
