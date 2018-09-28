@@ -31,6 +31,8 @@ class timetable_widget extends WP_Widget {
 		add_action('page', 'timetables_load_scripts');
 		extract( $args );
 
+		wp_register_style( 'timetable_css', plugin_dir_url(__FILE__) . 'css/timetable_display.css', false, '1.0.0' );
+		wp_enqueue_style( 'timetable_css' );
 
 		//Room id
 		$rooms[]         = $instance['room1'];
@@ -54,13 +56,13 @@ class timetable_widget extends WP_Widget {
 			
 			$sql = "SELECT name,teacher,date_format(start_time,'%H:%i') as start_time,date_format(end_time,'%H:%i') as end_time,TIME_TO_SEC(end_diff) as end_diff  FROM(
 					SELECT name,start_time, teacher, end_time,
-					CONCAT(timediff(time('2018-05-22 10:00:00.00'),
+					CONCAT(timediff(time(NOW()),
 						time(start_time))) as start_diff,
-					CONCAT(timediff(time('2018-05-22 10:00:00.00'),
+					CONCAT(timediff(time(NOW()),
 									time(end_time))) as end_diff,
 					day_of_week,timetable_id
 					FROM wp_timetables_lessons) as a
-					WHERE day_of_week = WEEKDAY('2018-05-22 10:00:00.00') and timetable_id = $room and start_diff > '0' and end_diff < '0'
+					WHERE day_of_week = WEEKDAY(NOW()) and timetable_id = $room and start_diff > '0' and end_diff < '0'
 					ORDER BY start_diff DESC
 					LIMIT 1;";
 			$pending = $wpdb->get_results($sql);
@@ -94,10 +96,10 @@ class timetable_widget extends WP_Widget {
 			echo "<div id='next_lesson' class='lesson'>";
 			$sql = "SELECT name,teacher,DATE_FORMAT(start_time,'%H:%i') as start_time,
 					TIME_TO_SEC(diff) as diff, DATE_FORMAT(end_time,'%H:%i') as end_time FROM(
-					SELECT name,start_time, end_time, teacher, CONCAT(timediff(time('2018-05-22 10:00:00.00'),
+					SELECT name,start_time, end_time, teacher, CONCAT(timediff(time(NOW()),
 					time(start_time))) as diff,day_of_week,timetable_id
 					FROM wp_timetables_lessons) as a
-					WHERE day_of_week = WEEKDAY('2018-05-22 10:00:00.00') and timetable_id = $room and diff < '0'
+					WHERE day_of_week = WEEKDAY(NOW()) and timetable_id = $room and diff < '0'
 					ORDER BY diff DESC
 					LIMIT 1;
 					";
@@ -236,8 +238,6 @@ class timetable_widget extends WP_Widget {
 	 * Loads CSS
 	 */
 	public function timetables_register_widget_styles() {
-		wp_register_style( 'timetable_css', plugin_dir_url(__FILE__) . 'css/timetable_display.css', false, '1.0.0' );
-		wp_enqueue_style( 'timetable_css' );
 
 		wp_register_style( 'catamaran-font','https://fonts.googleapis.com/css?family=Catamaran' );
 		wp_enqueue_style( 'catamaran-font' );
@@ -250,18 +250,19 @@ class timetable_widget extends WP_Widget {
 	 * Create acronym from subject name
 	 */
 	private function timetables_subject_acronym( $name = null) {
-	    // Remove HTML whitespaces and dashes and replace them with whitespace
-	    $words = str_replace("&nbsp;", " ", $name);
-	    $words = str_replace("-", " ", $words);
-	    //Slice up the string by whitespace
-        $words = explode(" ", $words);
-        $acronym = "";
-
+		// Remove HTML whitespaces and dashes and replace them with whitespace
+		$words = str_replace("&nbsp;", " ", $name);
+		$words = str_replace("-", " ", $words);
+		//Slice up the string by whitespace
+		$words = explode(" ", $words);
+		$acronym = "";
         foreach ($words as $w) {
           if ( strlen($w) > 3) {
-              $w[0] = strtoupper($w[0]);
+			  $acronym .= mb_strtoupper(mb_substr($w, 0, 1, "UTF-8"), "UTF-8");
           }
-          $acronym .= $w[0];
+          else {
+			  $acronym .= mb_substr($w, 0, 1, "UTF-8");
+		  }
         }
         return $acronym;
     }
