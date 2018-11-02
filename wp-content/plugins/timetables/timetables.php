@@ -74,3 +74,22 @@ function timetables_enqueue_admin_styles() {
 	wp_register_style( 'timetables_admin_css', plugin_dir_url(__FILE__) . 'css/timetables_settings.css', false, '1.0.0' );
 	wp_enqueue_style( 'timetables_admin_css' );
 }
+
+/**
+ * Add WP cron evenet for updating DB
+ */
+//On plugin activation schedule our daily database backup
+register_activation_hook( __FILE__, 'timetables_create_weekly_update_schedule' );
+
+function timetables_create_weekly_update_schedule(){
+	//Use wp_next_scheduled to check if the event is already scheduled
+	$timestamp = wp_next_scheduled( 'timetables_week_update' );
+	
+	//If $timestamp == false schedule daily backups since it hasn't been done previously
+	if( $timestamp == false ){
+		//Schedule the event for right now, then to repeat daily using the hook 'wi_create_daily_backup'
+		wp_schedule_event( strtotime(date('Y-m-d', strtotime(' Sunday'))), 'weekly', 'mhd_week_update' );
+	}
+}
+
+add_action( 'timetables_week_update', 'timetables_update_all_timetables' );

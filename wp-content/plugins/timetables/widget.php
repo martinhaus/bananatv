@@ -79,7 +79,7 @@ class timetable_widget extends WP_Widget {
 			}
 
 			if(!$pending) {
-				echo "<div class='timetable-free'>výuka neprebieha</div>";
+				echo "<div class='timetable-free'>výučba neprebieha</div>";
 			} else {
 
 				$id = chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) );
