@@ -88,7 +88,7 @@ class timetable_widget extends WP_Widget {
 			} else {
 				?>
 				<!-- Do konca zostáva  <span id="timetable<?php echo $id ?>" class="timetable-highlight">00:00:00</span><br> -->
-				<div class="time-right" >končí o <span id="<?php echo $id ?>" class="timetable-highlight-green"><?php echo floor(abs($time_till_end) / 60) ?></span> minút</div>
+				<div class="time-right" >končí o <span id="timetable<?php echo $id ?>" class="timetable-highlight-green"><?php echo floor(abs($time_till_end) / 60) ?></span> minút</div>
 				<script
 					type="text/javascript">startTimer(<?php echo abs( $time_till_end ) ?>, document.querySelector('#timetable<?php echo $id ?>'));</script>
 				<?php
@@ -134,6 +134,8 @@ class timetable_widget extends WP_Widget {
 			}
 			echo "</div>";
 			echo "</div>";
+
+			$id++;
 		}
 		
 		?>
