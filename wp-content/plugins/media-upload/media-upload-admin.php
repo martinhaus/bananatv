@@ -69,12 +69,10 @@ function media_upload_add_to_sequences($sequences, $post_id, $display_time) {
             'display_time' => $display_time
         ));
         
-    }
-    
-    
+    }  
 }
 
-function media_settings_page() {
+function media_admin_page() {
 
     
     
@@ -82,7 +80,7 @@ function media_settings_page() {
 	if(isset($_GET['action'])) {
 	    //Display edit page
 	    if ($_GET['action'] == 'edit') {
-	        media_settings_edit_page();
+	        media_admin_edit_page();
         }
     }
     else {
@@ -144,7 +142,7 @@ function media_settings_page() {
     }
 }
 
-function media_settings_edit_page() {
+function media_admin_edit_page() {
 	
 	// If edit form was submitted
     if ( isset($_POST['edit_save']) ) {
@@ -166,11 +164,6 @@ function media_settings_edit_page() {
                     <input type="text" name="name" id="name" value="<?php echo $details['title']; ?>">
                 </div>
                 <input type="hidden" name="post_id" value="<?php echo $_GET['id']; ?>">
-                <!--<input type="button" class="button-secondary add-image" value="Vyber obrázok">-->
-              <!--  <label for="tags">Značky</label>
-                <input type="text" id="tags">
-                <input type="button" class="button-secondary add-tag" value="Pridaj značku">
-                <ul id="tag-list"></ul>-->
                 <label for="date_start">Dátum začiatku zobrazovania</label>
                 <input type="text" id="date_start" name="date_start" value="<?php echo $details['start_date']; ?>">
                 <label for="date_end">Dátum konca zobrazovania</label>
@@ -366,7 +359,7 @@ function media_upload_create_pdf_sequence($pdf_url, $tags, $name, $timing) {
 function media_upload_create_sequence_of_images($name, $image_urls,$tags, $timing) {
 	//Create new sequence for posters
 	$sequence_id = media_upload_create_poster_sequence($name);
-	require_once ( ABSPATH . 'wp-content/plugins/page-rotation/page-rotation-settings.php');
+	require_once ( ABSPATH . 'wp-content/plugins/page-rotation/page-rotation-admin.php');
 	page_rotation_create_redirect_page($name,$sequence_id);
 	//Insert posters into newly created sequence
 	media_upload_insert_posters($sequence_id,$image_urls,$name,$tags,$timing);
@@ -461,8 +454,8 @@ function enqueue_media_uploader() {
 }
 
 function media_upload_enqueue_styles() {
-	wp_register_style( 'media-upload-settings', plugin_dir_url(__FILE__) . 'css/media-upload-settings.css', false, '1.0.0' );
-	wp_enqueue_style('media-upload-settings');
+	wp_register_style( 'media-upload-admin', plugin_dir_url(__FILE__) . 'css/media-upload-admin.css', false, '1.0.0' );
+	wp_enqueue_style('media-upload-admin');
 }
 
 function media_upload_submit_iframe_page($name, $url, $refresh_rate) {
@@ -487,7 +480,7 @@ function media_upload_submit_iframe_page($name, $url, $refresh_rate) {
     
 }
 
-function media_upload_iframe_settings_page() {
+function media_upload_iframe_admin_page() {
     
     //If page was submitted
     if( isset($_POST['submit_iframe']) ) {

@@ -11,17 +11,17 @@ License: A "Slug" license name e.g. GPL2
 */
 
 
-/**
- * Adds settings page to the left admin menu
+/**s
+ * Adds admin page to the left admin menu
  */
 function media_upload_add_menu_item() {
-	require( plugin_dir_path( __FILE__ ) . "media-upload-settings.php");
+	require( plugin_dir_path( __FILE__ ) . "media-upload-admin.php");
 	add_menu_page("Plagáty", "Plagáty", "manage_categories",
-		"media-settings", "media_settings_page", 'dashicons-format-gallery', 3);
+		"media-admin", "media_admin_page", 'dashicons-format-gallery', 3);
 	
 	//Submenu for iframe creatiion
-	add_submenu_page("media-settings","Pridanie iframe","Pridanie iframe",
-        "manage_categories","media-settings-iframe","media_upload_iframe_settings_page");
+	add_submenu_page("media-admin","Pridanie iframe","Pridanie iframe",
+        "manage_categories","media-admin-iframe","media_upload_iframe_admin_page");
 }
 
 
