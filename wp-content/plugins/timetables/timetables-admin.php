@@ -7,9 +7,9 @@
  */
 
 /**
- * Creates settings page
+ * Creates admin page
  */
-function timetables_settings_login_page() {
+function timetables_admin_page() {
 
 	//Load new timetable
 	if ( isset( $_POST['submit'] ) ) {
@@ -38,7 +38,7 @@ function timetables_settings_login_page() {
 	
 
 
-	timetables_settings_login_markup();
+	timetables_admin_markup();
 }
 
 function timetables_delete($row_id) {
@@ -394,7 +394,7 @@ function timetables_get_all_timetable_options() {
 }
 
 
-function timetables_settings_login_markup() {
+function timetables_admin_markup() {
 
 	timetables_enqueue_admin_styles();
     timetables_enqueue_scripts();
