@@ -4,7 +4,7 @@
 Plugin Name: Rozvrhy
 Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
 Description: A brief description of the Plugin.
-Version: 1.0
+Version: 2.0
 Author: Martin Hauskrecht
 Author URI: http://URI_Of_The_Plugin_Author
 License: A "Slug" license name e.g. GPL2
@@ -14,9 +14,9 @@ License: A "Slug" license name e.g. GPL2
  * Adds settings page to the left admin menu
  */
 function timetables_add_menu_item() {
-    require( plugin_dir_path( __FILE__ ) . "/timetables-settings.php");
+    require( plugin_dir_path( __FILE__ ) . "/timetables-admin.php");
 	add_menu_page("Rozvrhy", "Rozvrhy", "manage_categories",
-		"timetables-settings", "timetables_settings_login_page", 'dashicons-welcome-learn-more', 4);
+		"timetables-admin", "timetables_admin_page", 'dashicons-welcome-learn-more', 4);
 }
 
 /**
@@ -71,7 +71,7 @@ add_action( 'widgets_init', function(){
 });
 
 function timetables_enqueue_admin_styles() {
-	wp_register_style( 'timetables_admin_css', plugin_dir_url(__FILE__) . 'css/timetables_settings.css', false, '1.0.0' );
+	wp_register_style( 'timetables_admin_css', plugin_dir_url(__FILE__) . 'css/timetables_admin.css', false, '1.0.0' );
 	wp_enqueue_style( 'timetables_admin_css' );
 }
 
