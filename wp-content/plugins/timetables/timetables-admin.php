@@ -229,7 +229,7 @@ function timetables_parse($timetable) {
 	$start = $begin;
 	$all_lessons = array();
 	//Extract just first table in HTML - it has the timetable
-	$table = $timetable->find('table')
+	$table = $timetable->find('table')[0];
 	//For each row in the table
 	foreach ( $table->find( 'tr' ) as $row ) {
 		//For each column in the table
@@ -282,7 +282,6 @@ function timetables_parse($timetable) {
 		$start = $begin;
 	}
 	return $all_lessons;
-
 }
 
 /**
