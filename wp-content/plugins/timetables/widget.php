@@ -48,6 +48,9 @@ class timetable_widget extends WP_Widget {
 			<?php
 			echo "</div>";
 		$rooms = array_filter($rooms);
+
+		// Id for generated timetables
+		$id = 0;
 		foreach ($rooms as $room) {
 			
 			$sql = "SELECT room from wp_timetables_timetables WHERE id = $room";
@@ -64,10 +67,12 @@ class timetable_widget extends WP_Widget {
 					WHERE day_of_week = WEEKDAY(NOW()) and timetable_id = $room and start_diff > '0' and end_diff < '0'
 					ORDER BY start_diff DESC
 					LIMIT 1;";
+
 			$pending = $wpdb->get_results($sql);
 			echo "<div class='lessons'>";
 			echo "<div class='timetable-info room-name'>" . $room_name[0]->room . "</div>";
 			echo "<div id='current_lesson' class='lesson'>";
+			
 			$time_till_end ="";
 			foreach ( $pending as $key => $row ) {
 				echo "<span class='acronym'>" . $this->timetables_subject_acronym($row->name)  . " - </span>  "; 
@@ -77,20 +82,18 @@ class timetable_widget extends WP_Widget {
 				$time_till_end = $row->end_diff;
 			}
 
+
 			if(!$pending) {
 				echo "<div class='timetable-free'>výučba neprebieha</div>";
 			} else {
-
-				$id = chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) );
 				?>
-				<!-- Do konca zostáva  <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span><br> -->
+				<!-- Do konca zostáva  <span id="timetable<?php echo $id ?>" class="timetable-highlight">00:00:00</span><br> -->
 				<div class="time-right" >končí o <span id="<?php echo $id ?>" class="timetable-highlight-green"><?php echo floor(abs($time_till_end) / 60) ?></span> minút</div>
 				<script
-					type="text/javascript">startTimer(<?php echo abs( $time_till_end ) ?>, document.querySelector('#<?php echo $id ?>'));</script>
+					type="text/javascript">startTimer(<?php echo abs( $time_till_end ) ?>, document.querySelector('#timetable<?php echo $id ?>'));</script>
 				<?php
 			}
 			echo "</div>";
-
 
 			echo "<div id='next_lesson' class='lesson'>";
 			$sql = "SELECT name,teacher,DATE_FORMAT(start_time,'%H:%i') as start_time,
@@ -100,9 +103,7 @@ class timetable_widget extends WP_Widget {
 					FROM wp_timetables_lessons) as a
 					WHERE day_of_week = WEEKDAY(NOW()) and timetable_id = $room and diff < '0'
 					ORDER BY diff DESC
-					LIMIT 1;
-					";
-
+					LIMIT 1;";
 
 			$next_hour = $wpdb->get_results($sql);
 			$time_till_end ="";
@@ -117,17 +118,17 @@ class timetable_widget extends WP_Widget {
 				$time_till_end = $row->diff;
 			}
 
+			// Increase counter for generated ids
+			$id++; 
+
 			if(!$next_hour) {
 				echo "";
 			} else {
-
-				//Print countdown timer
-				$id = chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) ) . chr( rand( 65, 90 ) );
 				?>
-				<!-- Do začiatku zostáva  <span id="<?php echo $id ?>" class="timetable-highlight">00:00:00</span> -->
-				<div class="time-right" >začína o <span id="<?php echo $id ?>" class="timetable-highlight"><?php echo floor(abs($time_till_end) / 60) ?></span> minút</div>
+				<!-- Do začiatku zostáva  <span id="timetable<?php echo $id ?>" class="timetable-highlight">00:00:00</span> -->
+				<div class="time-right" >začína o <span id="timetable<?php echo $id ?>" class="timetable-highlight"><?php echo floor(abs($time_till_end) / 60) ?></span> minút</div>
 				<script
-					type="text/javascript">startTimer(<?php echo abs( $time_till_end ) ?>, document.querySelector('#<?php echo $id ?>'));</script>
+					type="text/javascript">startTimer(<?php echo abs( $time_till_end ) ?>, document.querySelector('#timetable<?php echo $id ?>'));</script>
 				<?php
 
 			}
