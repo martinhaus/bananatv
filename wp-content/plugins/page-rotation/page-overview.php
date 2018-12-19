@@ -21,9 +21,6 @@ function page_rotation_overview_help () {
 function page_rotation_overview_page() {
 	include('Page_Overview_List.php');
 	
-	
-	
-	
 	?>
     <div id="dialog-delete" title="Zmazať záznam?">
         <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Ste si istý, že chcete zmazať tento záznam? Krok sa nedá vrátiť naspäť.</p>
