@@ -33,11 +33,8 @@ function timetables_admin_page() {
 	
 	else if ( isset($_POST['update_timetables'])) {
 	    timetables_update_all_timetables();
-    }
-    
+	}
 	
-
-
 	timetables_admin_markup();
 }
 
@@ -232,62 +229,58 @@ function timetables_parse($timetable) {
 	$start = $begin;
 	$all_lessons = array();
 	//Extract just first table in HTML - it has the timetable
-	foreach ($timetable->find('table') as $table) {
-		//For each row in the table
-		foreach ( $table->find( 'tr' ) as $row ) {
-			//For each column in the table
-			foreach ( $row->find( 'td' ) as $data ) {
-				//Extracts day from tablerow
-				if ( ($data->class == "zahlavi") && ($data->plaintext != "") ) {
-					$day = $data->plaintext;
-					//Eliminate dividing lines in the table
-				} elseif ( $data->class != "odsazena" ) {
-					//Block larger than one hour
-					if ( $data->colspan != "" ) {
-						//Mark block start and finish time
-						$lesson_start = $start;
-						$lesson_end = $start += $data->colspan;
-						$lesson_name = "";
-						$teacher = "";
-						//Valid lesson entry
-						if($data->class == 'rozvrh-cvic' || $data->class == 'rozvrh-pred') {
-							$counter = 0;
-							foreach ( $data->find( 'a' ) as $anchor ) {
-								$counter ++;
-								//Lesson room
-								if( $counter == 1) {
-									$room = $anchor->plaintext;
-									$room = str_replace(" (BA-MD-FIIT)","",$room);
-								}
-
-								//Lesson name
-								if ( $counter == 2 ) {
-									$lesson_name = $anchor->plaintext;
-								} //Teacher
-								elseif ( $counter == 3 ) {
-									$teacher = $anchor->plaintext;
-								}
+	$table = $timetable->find('table')
+	//For each row in the table
+	foreach ( $table->find( 'tr' ) as $row ) {
+		//For each column in the table
+		foreach ( $row->find( 'td' ) as $data ) {
+			//Extracts day from tablerow
+			if ( ($data->class == "zahlavi") && ($data->plaintext != "") ) {
+				$day = $data->plaintext;
+				//Eliminate dividing lines in the table
+			} elseif ( $data->class != "odsazena" ) {
+				//Block larger than one hour
+				if ( $data->colspan != "" ) {
+					//Mark block start and finish time
+					$lesson_start = $start;
+					$lesson_end = $start += $data->colspan;
+					$lesson_name = "";
+					$teacher = "";
+					//Valid lesson entry
+					if($data->class == 'rozvrh-cvic' || $data->class == 'rozvrh-pred') {
+						$counter = 0;
+						foreach ( $data->find( 'a' ) as $anchor ) {
+							$counter ++;
+							//Lesson room
+							if( $counter == 1) {
+								$room = $anchor->plaintext;
+								$room = str_replace(" (BA-MD-FIIT)","",$room);
 							}
-							//Creates new lessson object and adds it to the array
-							$lesson = new Lesson($lesson_start,$lesson_end,$teacher,$lesson_name,$day,$room);
-							$all_lessons[] = $lesson;
 
+							//Lesson name
+							if ( $counter == 2 ) {
+								$lesson_name = $anchor->plaintext;
+							} //Teacher
+							elseif ( $counter == 3 ) {
+								$teacher = $anchor->plaintext;
+							}
 						}
-					//Empty gap
-					} elseif( ($data->class != "zahlavi")) {
-						$start ++;
+						//Creates new lessson object and adds it to the array
+						$lesson = new Lesson($lesson_start,$lesson_end,$teacher,$lesson_name,$day,$room);
+						$all_lessons[] = $lesson;
+
 					}
-				//Not a valid timetable entry - ie. dividing line
+				//Empty gap
+				} elseif( ($data->class != "zahlavi")) {
+					$start ++;
 				}
+			//Not a valid timetable entry - ie. dividing line
 			}
-
-			//Updates start time as the start of the new day
-			$start = $begin;
 		}
-		//Breaks the cycle, only first table is needed
-		break;
-	}
 
+		//Updates start time as the start of the new day
+		$start = $begin;
+	}
 	return $all_lessons;
 
 }
