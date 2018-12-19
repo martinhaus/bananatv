@@ -60,9 +60,9 @@ class FIITWeatherWidget extends WP_Widget {
 		 
 		 echo $before_widget;
 		 ?>
-            <div id="fiit-weather">
-	            
-                    
+
+		<div id="fiit-weather">
+      
 		 <?php
 		
          
