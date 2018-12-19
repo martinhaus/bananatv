@@ -17,10 +17,10 @@ License: A "Slug" license name e.g. GPL2
 */
 
 function fiit_ad_add_menu_item() {
-	require_once (plugin_dir_path(__FILE__) . "fiit-ad-settings.php");
+	require_once (plugin_dir_path(__FILE__) . "fiit-ad-admin.php");
 	//Original icon 'dashicons-editor-table'
 	add_menu_page("Reklamy", "Reklamy", "manage_categories",
-		"fiit-ad-settings", "fiit_ad_settings_page", 'dashicons-welcome-write-blog', 4);
+		"fiit-ad-admin", "fiit_ad_admin_page", 'dashicons-welcome-write-blog', 4);
 }
 
 function fiit_ad_create_db_tables() {

@@ -9,8 +9,8 @@
 
 /* MARKUP CODE */
 
-function fiit_ad_settings_page() {
-    fiit_ad_settings_scripts();
+function fiit_ad_admin_page() {
+    fiit_ad_admin_scripts();
     
     if (isset($_POST['new_company_submit'])) {
         fiit_ad_create_company($_POST['company_name'],$_POST['week_type']);
@@ -248,7 +248,7 @@ function fiit_ad_upload_image($url) {
 	return wp_get_attachment_url($attachment_id);
 }
 
-function fiit_ad_settings_scripts() {
+function fiit_ad_admin_scripts() {
 	//For warnings
 	wp_enqueue_script('ad-script', plugin_dir_url(__FILE__) .
 	                                'js/admin.js',array('jquery'),1.0);
