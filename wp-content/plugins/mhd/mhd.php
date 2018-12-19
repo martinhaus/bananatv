@@ -63,22 +63,20 @@ function mhd_create_initial_db_tables() {
 
 
 function mhd_enqueue_admin_styles() {
-	wp_register_style( 'mhd_admin_css', plugin_dir_url(__FILE__) . 'css/mhd_settings.css', false, '1.0.0' );
+	wp_register_style( 'mhd_admin_css', plugin_dir_url(__FILE__) . 'css/mhd_admin.css', false, '1.0.0' );
 	wp_enqueue_style( 'mhd_admin_css' );
 }
 
 
-
-
 /**
- * Adds settings page to the left admin menu
+ * Adds admin page to the left admin menu
  */
 function mhd_add_menu_item() {
-	require_once (plugin_dir_path(__FILE__) . "mhd-settings.php");
+	require_once (plugin_dir_path(__FILE__) . "mhd-admin.php");
 	//Original icon 'dashicons-editor-table'
 	$icon_path = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA0ODQuNSA0ODQuNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDg0LjUgNDg0LjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48ZyBpZD0iZGlyZWN0aW9ucy1idXMiPjxwYXRoIGQ9Ik0zOC4yNSwzNTdjMCwyMi45NSwxMC4yLDQzLjM1LDI1LjUsNTYuMVY0NTljMCwxNS4zLDEwLjIsMjUuNSwyNS41LDI1LjVoMjUuNWMxNS4zLDAsMjUuNS0xMC4yLDI1LjUtMjUuNXYtMjUuNWgyMDRWNDU5ICAgIGMwLDE1LjMsMTAuMiwyNS41LDI1LjUsMjUuNWgyNS41YzE1LjMsMCwyNS41LTEwLjIsMjUuNS0yNS41di00NS45YzE1LjMtMTIuNzUsMjUuNS0zMy4xNDksMjUuNS01Ni4xVjEwMiAgICBjMC04OS4yNS05MS44LTEwMi0yMDQtMTAycy0yMDQsMTIuNzUtMjA0LDEwMlYzNTd6IE0xMjcuNSwzODIuNWMtMjAuNCwwLTM4LjI1LTE3Ljg1LTM4LjI1LTM4LjI1UzEwNy4xLDMwNiwxMjcuNSwzMDYgICAgczM4LjI1LDE3Ljg1LDM4LjI1LDM4LjI1UzE0Ny45LDM4Mi41LDEyNy41LDM4Mi41eiBNMzU3LDM4Mi41Yy0yMC40LDAtMzguMjUtMTcuODUtMzguMjUtMzguMjVTMzM2LjYsMzA2LDM1NywzMDYgICAgczM4LjI1LDE3Ljg1LDM4LjI1LDM4LjI1UzM3Ny40LDM4Mi41LDM1NywzODIuNXogTTM5NS4yNSwyMjkuNWgtMzA2VjEwMmgzMDZWMjI5LjV6IiBmaWxsPSIjNDI3NTk5Ii8+PC9nPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=";
 	add_menu_page("MHD", "MHD", "manage_categories",
-		"mhd-settings", "mhd_settings_page", $icon_path, 4);
+		"mhd-admin", "mhd_admin_page", $icon_path, 4);
 }
 
 /**
@@ -120,7 +118,7 @@ function mhd_create_weekly_update_schedule(){
 		wp_schedule_event( strtotime(date('Y-m-d', strtotime(' Sunday'))), 'weekly', 'mhd_week_update' );
 	}
 }
-require_once (plugin_dir_path(__FILE__) . "mhd-settings.php");
+require_once (plugin_dir_path(__FILE__) . "mhd-admin.php");
 add_action( 'mhd_week_update', 'mhd_update_all_lines' );
 
 
@@ -136,7 +134,7 @@ function mhd_create_yearly_update_schedule(){
 		wp_schedule_event( strtotime(date('Y-m-d', strtotime('first day of january next year'))), 'yearly', 'mhd_year_update' );
 	}
 }
-require_once (plugin_dir_path(__FILE__) . "mhd-settings.php");
+require_once (plugin_dir_path(__FILE__) . "mhd-admin.php");
 add_action( 'mhd_year_update', 'mhd_parse_free_days' );
 
 /**
@@ -153,8 +151,6 @@ add_action( 'widgets_init', function(){
 add_action("admin_menu","mhd_add_menu_item");
 add_shortcode('mhd', 'mhd_shortcode_handler');
 register_activation_hook( __FILE__, 'mhd_create_initial_db_tables' );
-
-
 
 
 function mhd_shortcode_handler($atts) {

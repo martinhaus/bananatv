@@ -279,10 +279,10 @@ function mhd_update_all_lines() {
 
 
 /**
- * MHD settings page markup
+ * MHD admin page markup
  */
-function mhd_settings_page() {
-    mhd_register_settings_scripts();
+function mhd_admin_page() {
+    mhd_register_admin_scripts();
     
 	global $wpdb;
 	if(isset($_POST['submit'])) {
@@ -367,7 +367,7 @@ function mhd_create_stop_wp_page($stop_id, $stop_name) {
     return $post_id;
 }
 
-function mhd_register_settings_scripts() {
+function mhd_register_admin_scripts() {
 	//For warnings
 	wp_enqueue_script('mhd-script', plugin_dir_url(__FILE__) .
 	                                'js/warnings.js',array('jquery'),1.0);
