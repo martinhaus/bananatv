@@ -17,7 +17,6 @@ class timetable_widget extends WP_Widget {
 			'description' => 'Widget for displaying timetables',
 		);
 
-
 		add_action( 'wp_enqueue_scripts', array( $this, 'timetables_register_widget_scripts' ) );
 		$this->timetables_register_widget_styles();
 		parent::__construct( 'my_widget', 'Rozvrhy', $widget_ops );
