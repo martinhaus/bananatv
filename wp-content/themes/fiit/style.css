@@ -3095,6 +3095,7 @@ p > video {
 
 	.site-content {
 	/*	padding: 0 4.5455%; */
+		cursor: none;
 	}
 
 	.content-area {
