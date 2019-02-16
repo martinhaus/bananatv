@@ -8,12 +8,12 @@
 
 /*
 Plugin Name: Reklamný blok
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: A brief description of the Plugin.
+Plugin URI: https://github.com/martinhaus/bananatv
+Description: Displaying partner adds in specific time intervals
 Version: 1.0
 Author: Martin Hauskrecht
-Author URI: http://URI_Of_The_Plugin_Author
-License: A "Slug" license name e.g. GPL2
+Author URI: hauskrecht.sk
+License: MIT
 */
 
 function fiit_ad_add_menu_item() {

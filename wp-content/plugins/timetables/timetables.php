@@ -1,13 +1,13 @@
 <?php
 
 /*
-Plugin Name: Rozvrhy
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: A brief description of the Plugin.
+Plugin Name: STU Rozvrhy
+Plugin URI: https://github.com/martinhaus/bananatv
+Description: Displaying timetables from Slovak University of Technology (STU)
 Version: 2.0
 Author: Martin Hauskrecht
-Author URI: http://URI_Of_The_Plugin_Author
-License: A "Slug" license name e.g. GPL2
+Author URI: hauskrecht.sk
+License: MIT
 */
 
 /**

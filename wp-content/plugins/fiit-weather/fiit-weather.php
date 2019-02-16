@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: Fiit Počasie
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: A brief description of the Plugin.
+Plugin URI: https://github.com/martinhaus/bananatv
+Description: Displaying weather information from foreign and local sensors
 Version: 1.0
 Author: Martin Hauskrecht
-Author URI: http://URI_Of_The_Plugin_Author
+Author URI: hauskrecht.sk
 License: A "Slug" license name e.g. GPL2
 */
 

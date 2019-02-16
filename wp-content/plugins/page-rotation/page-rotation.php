@@ -1,13 +1,13 @@
 <?php
 
 /*
-Plugin Name: Sekvencie
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
+Plugin Name: Sekvencie stránok
+Plugin URI: https://github.com/martinhaus/bananatv
 Description: Modul slúžiaci na vytvorenie rotujúcej postupnosti zobrazených stránok
 Version: 1.0
 Author: Martin Hauskrecht
-Author URI: http://URI_Of_The_Plugin_Author
-License: A "Slug" license name e.g. GPL2
+Author URI: hauskrecht.sk
+License: MIT
 */
 
 
