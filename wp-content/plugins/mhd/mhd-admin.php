@@ -15,7 +15,7 @@
 function mhd_find_stop_name($stop) {
 	require_once( plugin_dir_path(__FILE__) . 'simplehtmldom/simple_html_dom.php');
 	$stop = str_replace(' ','+',$stop);
-	$url = "http://imhd.sk/ba/vyhladavanie?hladaj=" . $stop;
+	$url = "https://imhd.sk/ba/vyhladavanie?hladaj=" . $stop;
 
 	//Randomize browsers
 	require_once(plugin_dir_path(__FILE__) .  'random_agent.php');
@@ -40,7 +40,7 @@ function mhd_find_stop_name($stop) {
 function mhd_find_all_buses($stop) {
 	require_once( plugin_dir_path(__FILE__) . 'simplehtmldom/simple_html_dom.php');
 	$stop = str_replace(' ','+',$stop);
-	$url = "http://imhd.sk/ba/vyhladavanie?hladaj=" . $stop;
+	$url = "https://imhd.sk/ba/vyhladavanie?hladaj=" . $stop;
 
 	//Randomize browsers
 	require_once(plugin_dir_path(__FILE__) .  'random_agent.php');
@@ -57,7 +57,7 @@ function mhd_find_all_buses($stop) {
 	$buses = array();
 	foreach ($html->find('a') as $link) {
 		if($counter % 2)
-			$buses[] =  "http://www.imhd.sk" . $link->href;
+			$buses[] =  "https://www.imhd.sk" . $link->href;
 		$counter++;
 	}
 
