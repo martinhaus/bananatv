@@ -198,7 +198,7 @@ function fiit_ad_get_all_company_ads($comp_id) {
 //Returns week number
 function fiit_ad_get_week_number() {
     global $wpdb;
-	return $wpdb->get_var('select week(now());');
+	return $wpdb->get_var('select week(now()) + 1;');
 }
 
 

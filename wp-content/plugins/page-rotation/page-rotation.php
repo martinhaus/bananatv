@@ -474,7 +474,7 @@ function page_rotation_check_for_redirect() {
         }
         
 	    $screen_id = $_GET['screen'];
-	    $count_companies = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}fiit_ad_companies WHERE !even_week = (week(now()) % 2)");
+	    $count_companies = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}fiit_ad_companies WHERE !even_week = ((week(now()) + 1) % 2)");
 	    // Count screens with active ads
 	    $screen_count = page_rotation_count_ad_screens();
 	    
@@ -497,7 +497,7 @@ function page_rotation_check_for_redirect() {
         where page_id = (select post_id from wp_postmeta where meta_key like 'main_ad_page' LIMIT 1)) as rn
         WHERE screen_id = $screen_id;");
 	    
-	    $company_to_display = $wpdb->get_var("SELECT id FROM wp_fiit_ad_companies WHERE !even_week = (week(now()) % 2) LIMIT 1 OFFSET $offset;");
+	    $company_to_display = $wpdb->get_var("SELECT id FROM wp_fiit_ad_companies WHERE !even_week = ((week(now())+1) % 2) LIMIT 1 OFFSET $offset;");
      
 	    
 	    $ads_to_display = $wpdb->get_results("SELECT * FROM wp_fiit_ad_company_ads WHERE comp_id = $company_to_display ORDER BY id;");
